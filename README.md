@@ -30,6 +30,10 @@ Be prepared to answer the following questions:
 * If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc).
 * If you could design the storage from scratch, what would you change?
 
+## Data diagram
+
+![connections in schema and parquet dump](./docs/schema.png "Data Schema")
+
 ## Data descriptions - Postgres schema
 
 The following are the descriptions of the fields in the new postgres schema.  Keep in mind the legacy data may or may not meet these descriptions / types, or could have nonstandard formatting (names may appear in multiple places with different capitalization, for example).  The schema can be seen in `postgres/schema.sql`
@@ -81,10 +85,10 @@ This is the main table to track orders.  It has the following fields:
 ## Data descriptions - Data dumps
 
 ### Allowed parts list
-Current allowed parts list has the following format / aggregation challenges
+Current allowed parts list has the following format / aggregation challenges and can be found in the `data/allowed_parts.csv`
 
 * `component_name`: string lower case name of component with underscores
-* `part_id`: 
+* `part_id`: integer part number
 
 The batch processing dump is in the `data/batch_orders.parquet` file and the streaming dump is in the `data/streaming_orders.json`.  Both have the following general fields, as well as the type of cleaning needed to be completed
 * `order_uuid`: UUID the shipping system uses to keep track of orders
