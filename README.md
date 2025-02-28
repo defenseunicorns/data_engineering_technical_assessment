@@ -2,7 +2,7 @@
 
 ## Overview
 
-The following exercise is meant to test your ability to manipulate data and get some insight into how you work with data programatically and some of your thoughts on designing data systems.
+The following exercise is meant to test your ability to manipulate data and get some insight into how you work with data programatically and some of your thoughts on designing data systems.  There is a four hour time limit for code submission.
 
 ### Domain Overview
 
