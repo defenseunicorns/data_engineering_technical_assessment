@@ -105,7 +105,7 @@ The streaming data json has the following schema:
 ```json
 {
    "order_uuid" : string,
-   "datetime" : "MM-DDD-YYYY HH:MM:SS",
+   "datetime" : "MM-DD-YYYY HH:MM:SS",
    "status": string,
    "details":
    {

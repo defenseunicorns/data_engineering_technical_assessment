@@ -31,7 +31,7 @@ CREATE TABLE orders (
   comp_priority BOOLEAN,
   order_date DATETIME,
   ordered_by INT REFERENCES users(user_id),
-  status VARCHAR(32),
+  status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
   status_date DATETIME,
   FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id),
   UNIQUE (component_id, part_id, serial_no, order_date)
