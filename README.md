@@ -26,9 +26,13 @@ What is required to "pass" this assessment is to successfully populate the `comp
 ### Questions
 Be prepared to answer the following questions:
 * What are two important pieces of information lost in the current schema
+   * Good answer: `order_uuid` from the supplier and the full history of status changes
 * How would you modify the schema if you wanted to include that information
+   * Good answer: make a separate orders table and order_history table, add `order_uuid` to orders table
 * If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc).
+   * Many ways to do this, just looking to see if they are thinking about filtering orders by system etc.
 * If you could design the storage from scratch, what would you change?
+   * Many things could change, should probably at least wonder about the implementation of the `allowed_parts` table and connections -- foreign keys could be replaced by an on insert trigger, for example.
 
 ## Data diagram
 
