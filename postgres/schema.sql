@@ -1,29 +1,29 @@
-CREATE TABLE components (
+CREATE TABLE IF NOT EXISTS components (
   component_id SERIAL PRIMARY KEY,
   component_name VARCHAR(64) UNIQUE,
   system_name VARCHAR(64) -- valid are HYDRAULIC, ELETRICAL, TRANSMISSION, NAVIGATION
 );
 
-CREATE TABLE parts (
+CREATE TABLE IF NOT EXISTS parts (
   part_id SERIAL PRIMARY KEY,
   manufacturer_id INT,
   part_no INT,
   UNIQUE (manufacturer_id, part_no)
 );
 
-CREATE TABLE allowed_parts (
+CREATE TABLE IF NOT EXISTS allowed_parts (
   component_id INT REFERENCES components(component_id) ON DELETE CASCADE,
   part_id INT REFERENCES parts(part_id) ON DELETE CASCADE,
   deprecated BOOLEAN  -- FLAG FOR A PART / COMPONENT PAIRING THAT IS NO LONGER ALLOWED
   PRIMARY KEY (component_id, part_id)
 );
 
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   user_id SERIAL PRIMARY KEY,
   user_name VARCHAR(32) -- format should be first_name.last_name
 );
 
-CREATE TABLE orders (
+CREATE TABLE IF NOT EXISTS orders (
   order_id SERIAL PRIMARY KEY,
   component_id INT REFERENCES components(component_id) ON DELETE SET NULL,
   part_id INT REFERENCES parts(part_id) ON DELETE SET NULL,
