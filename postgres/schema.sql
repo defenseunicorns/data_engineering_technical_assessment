@@ -8,7 +8,7 @@ CREATE TABLE parts (
   part_id SERIAL PRIMARY KEY,
   manufacturer_id INT,
   part_no INT,
-  UNIQUE (cage_no, part_no)
+  UNIQUE (manufacturer_id, part_no)
 );
 
 CREATE TABLE allowed_parts (
@@ -20,13 +20,13 @@ CREATE TABLE allowed_parts (
 
 CREATE TABLE users (
   user_id SERIAL PRIMARY KEY,
-  user_name VARCHAR(32)
+  user_name VARCHAR(32) -- format should be first_name.last_name
 );
 
 CREATE TABLE orders (
   order_id SERIAL PRIMARY KEY,
-  component_id INT,
-  part_id INT,
+  component_id INT REFERENCES components(component_id) ON DELETE SET NULL,
+  part_id INT REFERENCES parts(part_id) ON DELETE SET NULL,
   serial_no INT,
   comp_priority BOOLEAN,
   order_date DATETIME,
