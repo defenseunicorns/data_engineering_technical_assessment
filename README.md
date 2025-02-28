@@ -104,16 +104,16 @@ The batch processing dump is in the `data/batch_orders.parquet` file and the str
 The streaming data json has the following schema:
 ```json
 {
-   "order_uuid" : string,
-   "datetime" : "MM-DD-YYYY HH:MM:SS",
-   "status": string,
+   "order_uuid" : "string",
+   "datetime" : "string, fmt: MM-DD-YYYY HH:MM:SS",
+   "status": "string",
    "details":
    {
-      "component_name": string,
-      "manufacturer_id": int,
-      "part_number": int,
-      "serial_number": int,
-      "ordered_by": string
+      "component_name": "string",
+      "manufacturer_id": "int",
+      "part_number": "int",
+      "serial_number": "int",
+      "ordered_by": "string"
    }
 }
 ```
