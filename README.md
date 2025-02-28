@@ -23,6 +23,13 @@ What is required to "pass" this assessment is to successfully populate the `comp
    * correct number of orders with `comp_priority` flag set
    * complexity / quality of ingestion scripts / db communications
 
+### Questions
+Be prepared to answer the following questions:
+* What are two important pieces of information lost in the current schema
+* How would you modify the schema if you wanted to include that information
+* If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc).
+* If you could design the storage from scratch, what would you change?
+
 ## Data descriptions - Postgres schema
 
 The following are the descriptions of the fields in the new postgres schema.  Keep in mind the legacy data may or may not meet these descriptions / types, or could have nonstandard formatting (names may appear in multiple places with different capitalization, for example).  The schema can be seen in `postgres/schema.sql`
@@ -73,6 +80,12 @@ This is the main table to track orders.  It has the following fields:
 
 ## Data descriptions - Data dumps
 
+### Allowed parts list
+Current allowed parts list has the following format / aggregation challenges
+
+* `component_name`: string lower case name of component with underscores
+* `part_id`: 
+
 The batch processing dump is in the `data/batch_orders.parquet` file and the streaming dump is in the `data/streaming_orders.json`.  Both have the following general fields, as well as the type of cleaning needed to be completed
 * `order_uuid`: UUID the shipping system uses to keep track of orders
 * `component_name`: name of the component (multiple cases)
@@ -106,3 +119,5 @@ The `details` field is optional and only included on `ORDERED` status messages.
 Aside from the cleaning required in the individual fields mentioned in the Data descriptions, the following is also being tested:
 * Most recent status: Legacy data will have to be aggregated and different fields picked from different staus updates.  Only the most recent status should be put into the database, but the user information will have to be picked from either the `PENDING` or `ORDERED` row.
 * Duplicate data:  Rarely, an order will have a duplicate entry for the most recent status.  Sometimes, this may contain a different `ordered_by` user to test duplicate data handling.
+* Component names in the raw data can be in many different formats either using spaces or underscores between words, sometimes capitalized and sometimes not.  They are consistent in a single `order_uuid`
+* User names can be in `First Last`, `Last, First`, or `first.last` formats in the raw data
