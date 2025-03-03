@@ -2,11 +2,17 @@
 
 ## Overview
 
-The following exercise is meant to test your ability to manipulate data and get some insight into how you work with data programatically and some of your thoughts on designing data systems.  There is a four hour time limit for code submission.
+This exercise is designed to assess a data engineering candidate’s ability to manipulate data programmatically, analyze insights, and demonstrate their thought process in designing data systems. Candidates should complete the assessment within a four-hour time limit for code submission.
+
+Please note that this exercise is solely for evaluation purposes and will not be used in real-world applications by Defense Unicorns.
 
 ### Domain Overview
 
-This exercise deals with a system to order parts from a supplier for the company, which builds trucks.  Due poor disaster planning, the legacy system was destroyed and is unrecoverable save for the data extracts in the `/data` folder.  A DBA has designed a new schema to hold the legacy data and track new orders in postgres.  Priority orders are intiated and updated via a message queue, while other orders use nightly batch processing.
+This exercise involves building a system to track parts orders for truck components. The company, which manufactures trucks, previously relied on a legacy ordering system that was lost due to poor disaster planning. The only remaining data is in the /data folder as extracts.
+
+A DBA has designed a new PostgreSQL schema to store the recovered legacy data and track new orders. The system processes priority orders via a message queue and regular orders through nightly batch processing.
+
+Your task is to write scripts to clean and ingest the legacy data, simulating both batch and stream processing. You should spend no more than four hours on the coding portion. Be prepared to discuss your approach during the assessment, but you do not need to submit written answers to the questions.
 
 The main task is to set up a system to track parts orders for truck components.  This involves writing scripts to clean and ingest the legacy data (simulating batch processing and stream processing).  You should spend no more than four hours on the coding exercise.  Be prepared to talk through the questions in the question section, but you don't need to submit answers for the assessment.
 
