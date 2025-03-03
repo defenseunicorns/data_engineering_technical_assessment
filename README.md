@@ -143,6 +143,6 @@ The `details` field is optional and is only included on `ORDERED` status message
 ## ETL gotchas
 Aside from the cleaning required in the individual fields mentioned in the Data descriptions, the following is also being tested:
 * Most recent status: Legacy data will have to be aggregated and different fields picked from different staus updates.  Only the most recent status should be put into the database, but the user information will have to be picked from either the `PENDING` or `ORDERED` row.
-* Duplicate data:  Rarely, an order will have a duplicate entry for the most recent status.  Sometimes, this may contain a different `ordered_by` user to test duplicate data handling.
+* Conflicting users:  Rarely, an order will have a conflicting user for the most recent status.  This shouldn't affect the ingestion as long as they are relying on the proper STATUS row to get the `ordered_by` information.
 * Component names in the raw data can be in many different formats either using spaces or underscores between words, sometimes capitalized and sometimes not.  They are consistent in a single `order_uuid`
 * User names can be in `First Last`, `Last, First`, or `first.last` formats in the raw data
