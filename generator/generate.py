@@ -159,7 +159,6 @@ def corrupt_users(df:pd.DataFrame):
          frame.sort_values("status_date", ascending=True).reset_index(drop=True)
          status = frame['status'].values.tolist()[-1]
          user = np.random.choice(users, 1)[0]
-         print(status, user)
          frame.loc[frame['status']==status, "ordered_by"] = user
          frames.append(frame)
       else:
