@@ -47,7 +47,7 @@ The following are the descriptions of the fields in the new postgres schema.  Ke
 A component is a part that can be used for business purposes (install in a truck).  Fields:
 * `component_id`: database assigned integer primary key
 * `component_name`: VARCHAR(64) name of component
-* `system_name`: VARCHAR(64) name of system (valid names are HYDRAULIC, ELECTRICAL, TRANSMISSION, NAVIGATION)
+* `system_name`: VARCHAR(64) name of system (valid names are `HYDRAULIC`, `ELECTRICAL`, `TRANSMISSION`, `NAVIGATION`)
 
 ### Part
 
@@ -92,16 +92,17 @@ This is the main table to track orders.  It has the following fields:
 Current allowed parts list has the following format / aggregation challenges and can be found in the `data/allowed_parts.csv`
 
 * `component_name`: string lower case name of component with underscores
-* `part_id`: integer part number
+* `manufacturer_id`: integer manufacturer id
+* `part_no`: integer part number
 
 The batch processing dump is in the `data/batch_orders.parquet` file and the streaming dump is in the `data/streaming_orders.json`.  Both have the following general fields, as well as the type of cleaning needed to be completed
 * `order_uuid`: UUID the shipping system uses to keep track of orders
-* `component_name`: name of the component (multiple cases)
-* `system_name`: name of the system (multiple cases, some invalid fields)
-* `manufactuer_id`: integer id of the manufactuer (no cleaning required)
+* `component_name`: name of the component (multiple cases, spaces may be `_` characters)
+* `system_name`: name of the system (no cleaning required)
+* `manufacturer_id`: integer id of the manufactuer (no cleaning required)
 * `part_no`: integer part number (no cleaning required)
 * `serial_no`: integer serial number (no cleaning required)
-* `status`: status of order (multiple cases, some invalid fields)
+* `status`: status of order (no cleaning required)
 * `status_date`: datetime of update
 * `ordered_by`: Name of user who ordered part (only shows in `PENDING` rows for parquet or `ORDERED` messages for the streaming format, different name formats)
 
@@ -114,6 +115,7 @@ The streaming data json has the following schema:
    "details":
    {
       "component_name": "string",
+      "system_name": "string",
       "manufacturer_id": "int",
       "part_number": "int",
       "serial_number": "int",
@@ -122,6 +124,11 @@ The streaming data json has the following schema:
 }
 ```
 The `details` field is optional and only included on `ORDERED` status messages.
+
+### Cleaning required
+* Transform the component names into `lowercase_with_underscore_spaces` format
+* Transform the user names into `first_name.last_name` format
+* Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
 
 ## ETL gotchas
 Aside from the cleaning required in the individual fields mentioned in the Data descriptions, the following is also being tested:
