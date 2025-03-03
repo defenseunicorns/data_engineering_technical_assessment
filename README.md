@@ -137,6 +137,7 @@ The `details` field is optional and is only included on `ORDERED` status message
 * Transform the component names into `lowercase_with_underscore_spaces` format
 * Transform the user names into `first_name.last_name` format
 * Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
+* The `ordered_by` data may have been corrupted in a small number of rows in the batch process orders.
 
 <!-- TODO: Remove section after assessment is finalized -->
 ## ETL gotchas
