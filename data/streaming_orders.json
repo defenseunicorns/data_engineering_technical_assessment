@@ -1,1060 +1,991 @@
 [
     {
-        "order_uuid": "8b1bcf08-5831-4be7-88e4-55d806872a18",
-        "datetime": "06-25-2015 11:03:19",
+        "order_uuid": "bf8c2c2a-15bd-4232-af8a-fabe882d1ddb",
+        "datetime": "10-08-2010 21:23:25",
         "status": "ORDERED",
         "details": {
-            "component_name": "passenger plug ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 611292,
-            "serial_number": 430674,
-            "ordered_by": "jane.doe"
-        }
-    },
-    {
-        "order_uuid": "8b1bcf08-5831-4be7-88e4-55d806872a18",
-        "datetime": "06-26-2015 05:44:47",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "8b1bcf08-5831-4be7-88e4-55d806872a18",
-        "datetime": "06-26-2015 05:49:28",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "8aa731b7-fd87-482b-abaf-ce03e4a35acb",
-        "datetime": "01-24-2005 23:48:36",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "bed drain ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 467686,
-            "serial_number": 5789502,
-            "ordered_by": "Picard, JL"
-        }
-    },
-    {
-        "order_uuid": "8aa731b7-fd87-482b-abaf-ce03e4a35acb",
-        "datetime": "02-01-2005 20:11:47",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "8aa731b7-fd87-482b-abaf-ce03e4a35acb",
-        "datetime": "02-05-2005 16:51:08",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "c5fd9250-fe1c-4f48-b5fd-fb09f76057ea",
-        "datetime": "04-05-2009 13:49:33",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "passenger joint ELE 001",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 1484,
-            "part_number": 632025,
-            "serial_number": 5102084,
-            "ordered_by": "Picard, JL"
-        }
-    },
-    {
-        "order_uuid": "c5fd9250-fe1c-4f48-b5fd-fb09f76057ea",
-        "datetime": "04-06-2009 21:03:57",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "c5fd9250-fe1c-4f48-b5fd-fb09f76057ea",
-        "datetime": "04-15-2009 03:38:48",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "d50de31b-11af-4322-b8f2-2a9d73442c04",
-        "datetime": "12-06-2019 01:53:21",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Passenger_plug_ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 2489,
-            "part_number": 581124,
-            "serial_number": 5675728,
-            "ordered_by": "Jane Doe"
-        }
-    },
-    {
-        "order_uuid": "d50de31b-11af-4322-b8f2-2a9d73442c04",
-        "datetime": "12-10-2019 14:05:36",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "d50de31b-11af-4322-b8f2-2a9d73442c04",
-        "datetime": "12-19-2019 11:52:51",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "307e1b96-5252-40d5-b61f-fa50828190ae",
-        "datetime": "03-02-2012 18:53:18",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Cabin_casing_nav",
+            "component_name": "Bed drain nav",
             "system_name": "NAVIGATION",
-            "manufacturer_id": 1783,
-            "part_number": 106771,
-            "serial_number": 6220865,
-            "ordered_by": "Picard, JL"
-        }
-    },
-    {
-        "order_uuid": "307e1b96-5252-40d5-b61f-fa50828190ae",
-        "datetime": "03-06-2012 01:25:59",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "307e1b96-5252-40d5-b61f-fa50828190ae",
-        "datetime": "03-10-2012 23:57:37",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "6eada0d1-8e03-43c4-a85c-d7a6bff5248d",
-        "datetime": "10-15-1988 14:59:30",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "passenger joint ELE 001",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 153724,
-            "serial_number": 82871,
-            "ordered_by": "Michael Bolton"
-        }
-    },
-    {
-        "order_uuid": "6eada0d1-8e03-43c4-a85c-d7a6bff5248d",
-        "datetime": "10-15-1988 16:09:05",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "6eada0d1-8e03-43c4-a85c-d7a6bff5248d",
-        "datetime": "10-16-1988 23:12:16",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "30bb2896-6614-4e3d-97bb-cdadbc06ab85",
-        "datetime": "06-26-1993 17:44:19",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "roof piston ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 837440,
-            "serial_number": 6067511,
-            "ordered_by": "doug.unicorn"
-        }
-    },
-    {
-        "order_uuid": "30bb2896-6614-4e3d-97bb-cdadbc06ab85",
-        "datetime": "07-01-1993 00:07:57",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "30bb2896-6614-4e3d-97bb-cdadbc06ab85",
-        "datetime": "07-09-1993 11:01:25",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "99ea9725-3ee2-4c55-af36-f5483c921e8e",
-        "datetime": "01-28-2020 11:02:21",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "wheel-well screw holder HYD",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 2489,
-            "part_number": 798459,
-            "serial_number": 811630,
-            "ordered_by": "John Doe"
-        }
-    },
-    {
-        "order_uuid": "99ea9725-3ee2-4c55-af36-f5483c921e8e",
-        "datetime": "01-30-2020 19:45:38",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "99ea9725-3ee2-4c55-af36-f5483c921e8e",
-        "datetime": "02-01-2020 23:23:28",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "4a5a4549-514b-4673-bd55-0b3580802c0d",
-        "datetime": "12-22-2018 21:39:54",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "passenger drain TRA",
-            "system_name": "TRANSMISSION",
-            "manufacturer_id": 1998,
-            "part_number": 901858,
-            "serial_number": 5407365,
-            "ordered_by": "Racecar Palindrome"
-        }
-    },
-    {
-        "order_uuid": "4a5a4549-514b-4673-bd55-0b3580802c0d",
-        "datetime": "12-27-2018 15:43:19",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "4a5a4549-514b-4673-bd55-0b3580802c0d",
-        "datetime": "01-04-2019 11:30:11",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "252e9266-5e75-4570-afb0-8aa5b5e73d66",
-        "datetime": "03-01-1988 12:18:26",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Passenger_joint_ele_002",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 663916,
-            "serial_number": 6412694,
-            "ordered_by": "Doe, Jane"
-        }
-    },
-    {
-        "order_uuid": "252e9266-5e75-4570-afb0-8aa5b5e73d66",
-        "datetime": "03-10-1988 03:43:53",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "252e9266-5e75-4570-afb0-8aa5b5e73d66",
-        "datetime": "03-18-1988 14:13:36",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "f90b1e39-8aa2-41b9-b45a-e5a5ae3ecbec",
-        "datetime": "11-21-2024 10:01:45",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Passenger_plug_ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 168942,
-            "serial_number": 9681914,
-            "ordered_by": "Scott, Michael"
-        }
-    },
-    {
-        "order_uuid": "f90b1e39-8aa2-41b9-b45a-e5a5ae3ecbec",
-        "datetime": "11-21-2024 10:47:43",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "f90b1e39-8aa2-41b9-b45a-e5a5ae3ecbec",
-        "datetime": "11-25-2024 05:14:56",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "fd18a200-8c70-454c-b14f-3386bda15001",
-        "datetime": "10-20-2011 14:44:58",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "wheel-well plug HYD",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 1484,
-            "part_number": 480341,
-            "serial_number": 991582,
-            "ordered_by": "Michael Bolton"
-        }
-    },
-    {
-        "order_uuid": "fd18a200-8c70-454c-b14f-3386bda15001",
-        "datetime": "10-22-2011 23:58:10",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "fd18a200-8c70-454c-b14f-3386bda15001",
-        "datetime": "10-23-2011 03:15:11",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "e44f230f-6202-4036-8393-3f9bed32fdd7",
-        "datetime": "06-21-2011 23:39:21",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "cabin_plug_NAV",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 7957,
-            "part_number": 745950,
-            "serial_number": 8915267,
-            "ordered_by": "jl.picard"
-        }
-    },
-    {
-        "order_uuid": "e44f230f-6202-4036-8393-3f9bed32fdd7",
-        "datetime": "06-27-2011 03:19:55",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "e44f230f-6202-4036-8393-3f9bed32fdd7",
-        "datetime": "07-06-2011 02:43:52",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "12e068b4-ce4b-476c-943c-79b7f3851aae",
-        "datetime": "06-07-2014 19:12:14",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Bed_bearing_ele_001",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 942003,
-            "serial_number": 481592,
-            "ordered_by": "michael.bolton"
-        }
-    },
-    {
-        "order_uuid": "12e068b4-ce4b-476c-943c-79b7f3851aae",
-        "datetime": "06-11-2014 08:14:38",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "12e068b4-ce4b-476c-943c-79b7f3851aae",
-        "datetime": "06-11-2014 19:00:54",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "1755ee84-8335-416b-ac7f-675642ff67b0",
-        "datetime": "11-21-1998 23:28:59",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Cabin_casing_nav",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 3333,
-            "part_number": 341237,
-            "serial_number": 420297,
-            "ordered_by": "Unicorn, Doug"
-        }
-    },
-    {
-        "order_uuid": "1755ee84-8335-416b-ac7f-675642ff67b0",
-        "datetime": "11-24-1998 16:07:30",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "1755ee84-8335-416b-ac7f-675642ff67b0",
-        "datetime": "11-28-1998 20:34:12",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "29c3b616-c84a-46bc-9020-399ffc36e72d",
-        "datetime": "03-15-2002 22:09:06",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Engine-bay_screw_hyd_001",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 3333,
-            "part_number": 578314,
-            "serial_number": 4382236,
-            "ordered_by": "doug.unicorn"
-        }
-    },
-    {
-        "order_uuid": "29c3b616-c84a-46bc-9020-399ffc36e72d",
-        "datetime": "03-21-2002 01:28:06",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "29c3b616-c84a-46bc-9020-399ffc36e72d",
-        "datetime": "03-27-2002 11:47:17",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "573eef37-081d-4af8-ac78-67d5db7c5918",
-        "datetime": "04-25-2021 22:21:27",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "cabin wiring ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 1783,
-            "part_number": 337944,
-            "serial_number": 7156761,
-            "ordered_by": "racecar.palindrome"
-        }
-    },
-    {
-        "order_uuid": "573eef37-081d-4af8-ac78-67d5db7c5918",
-        "datetime": "05-03-2021 17:22:45",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "573eef37-081d-4af8-ac78-67d5db7c5918",
-        "datetime": "05-12-2021 11:04:00",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "87cab725-c9d9-453e-a071-dea249e07999",
-        "datetime": "02-28-2008 14:00:47",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "engine-bay screw ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 536764,
-            "serial_number": 9240100,
-            "ordered_by": "Richard Feynman"
-        }
-    },
-    {
-        "order_uuid": "87cab725-c9d9-453e-a071-dea249e07999",
-        "datetime": "03-01-2008 01:54:00",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "87cab725-c9d9-453e-a071-dea249e07999",
-        "datetime": "03-01-2008 12:00:56",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "4fc03256-2422-4f80-bb38-3dab950c1e05",
-        "datetime": "09-18-1996 21:33:17",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "cabin tank HYD",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 1998,
-            "part_number": 205481,
-            "serial_number": 643912,
-            "ordered_by": "Bolton, Michael"
-        }
-    },
-    {
-        "order_uuid": "4fc03256-2422-4f80-bb38-3dab950c1e05",
-        "datetime": "09-27-1996 00:15:54",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "4fc03256-2422-4f80-bb38-3dab950c1e05",
-        "datetime": "10-06-1996 10:56:18",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "25e3d428-9b6b-4212-8f0c-7d50581b3e47",
-        "datetime": "07-10-2007 00:10:14",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Wheel-well_filter_tra",
-            "system_name": "TRANSMISSION",
-            "manufacturer_id": 3333,
-            "part_number": 637420,
-            "serial_number": 6451557,
-            "ordered_by": "Bolton, Michael"
-        }
-    },
-    {
-        "order_uuid": "25e3d428-9b6b-4212-8f0c-7d50581b3e47",
-        "datetime": "07-18-2007 17:14:27",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "25e3d428-9b6b-4212-8f0c-7d50581b3e47",
-        "datetime": "07-27-2007 16:22:50",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "e9279401-4335-42a6-965d-e0c3ddc0d3fb",
-        "datetime": "09-26-2007 15:38:19",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "engine-bay wheel TRA",
-            "system_name": "TRANSMISSION",
-            "manufacturer_id": 1484,
-            "part_number": 601647,
-            "serial_number": 9822942,
-            "ordered_by": "Palindrome, Racecar"
-        }
-    },
-    {
-        "order_uuid": "e9279401-4335-42a6-965d-e0c3ddc0d3fb",
-        "datetime": "10-02-2007 20:01:34",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "e9279401-4335-42a6-965d-e0c3ddc0d3fb",
-        "datetime": "10-03-2007 18:29:27",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "0ea0b569-195f-4e8f-b91a-1f40bb51845a",
-        "datetime": "01-05-1997 04:37:09",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "roof_chassis_ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 672600,
-            "serial_number": 8188425,
-            "ordered_by": "Michael Bolton"
-        }
-    },
-    {
-        "order_uuid": "0ea0b569-195f-4e8f-b91a-1f40bb51845a",
-        "datetime": "01-13-1997 16:58:53",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "0ea0b569-195f-4e8f-b91a-1f40bb51845a",
-        "datetime": "01-15-1997 03:51:50",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "c8238530-35b5-4651-afa6-b2978c407881",
-        "datetime": "09-28-2014 23:49:21",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Cabin wiring ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 1998,
-            "part_number": 626267,
-            "serial_number": 3485677,
-            "ordered_by": "john.doe"
-        }
-    },
-    {
-        "order_uuid": "c8238530-35b5-4651-afa6-b2978c407881",
-        "datetime": "10-04-2014 22:32:47",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "c8238530-35b5-4651-afa6-b2978c407881",
-        "datetime": "10-06-2014 19:27:42",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "f00db3f3-cf21-4296-aa39-41bee54a8dfc",
-        "datetime": "05-31-2008 00:37:08",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "roof_piston_ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 858420,
-            "serial_number": 7962445,
-            "ordered_by": "Michael Scott"
-        }
-    },
-    {
-        "order_uuid": "f00db3f3-cf21-4296-aa39-41bee54a8dfc",
-        "datetime": "06-07-2008 13:28:41",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "f00db3f3-cf21-4296-aa39-41bee54a8dfc",
-        "datetime": "06-17-2008 06:11:36",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "179a37bd-68c4-4fa4-9086-4e5b275082ac",
-        "datetime": "01-19-1988 05:19:11",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "driver_piston_ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 1484,
-            "part_number": 349776,
-            "serial_number": 9893700,
-            "ordered_by": "racecar.palindrome"
-        }
-    },
-    {
-        "order_uuid": "179a37bd-68c4-4fa4-9086-4e5b275082ac",
-        "datetime": "01-24-1988 20:51:57",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "179a37bd-68c4-4fa4-9086-4e5b275082ac",
-        "datetime": "01-25-1988 20:11:59",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "ffdd842b-2fe0-49f4-9b9e-4a8120b7ee16",
-        "datetime": "01-11-1989 04:13:46",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "passenger_joint_ELE_001",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 399809,
-            "serial_number": 6204613,
-            "ordered_by": "doug.unicorn"
-        }
-    },
-    {
-        "order_uuid": "ffdd842b-2fe0-49f4-9b9e-4a8120b7ee16",
-        "datetime": "01-19-1989 13:45:32",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "ffdd842b-2fe0-49f4-9b9e-4a8120b7ee16",
-        "datetime": "01-26-1989 08:19:33",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "1bd2314c-e1a1-4b43-a7d1-f96f6e5702f2",
-        "datetime": "02-17-2018 06:07:17",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Bed bearing ele 001",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 6467,
-            "part_number": 102059,
-            "serial_number": 3028655,
-            "ordered_by": "JL Picard"
-        }
-    },
-    {
-        "order_uuid": "1bd2314c-e1a1-4b43-a7d1-f96f6e5702f2",
-        "datetime": "02-26-2018 19:06:08",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "1bd2314c-e1a1-4b43-a7d1-f96f6e5702f2",
-        "datetime": "03-07-2018 22:17:47",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "db7b43ff-9d97-41cd-b1c5-3d82fe22a9b4",
-        "datetime": "01-28-2004 03:25:46",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Engine-bay piston ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 429209,
-            "serial_number": 1628215,
-            "ordered_by": "Scott, Michael"
-        }
-    },
-    {
-        "order_uuid": "db7b43ff-9d97-41cd-b1c5-3d82fe22a9b4",
-        "datetime": "02-01-2004 17:07:19",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "db7b43ff-9d97-41cd-b1c5-3d82fe22a9b4",
-        "datetime": "02-07-2004 11:26:34",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "291f6cb9-cfb9-4576-94e0-2b1278674639",
-        "datetime": "04-25-2012 19:10:12",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "bed pump HYD",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 1484,
-            "part_number": 153300,
-            "serial_number": 8629286,
-            "ordered_by": "Bolton, Michael"
-        }
-    },
-    {
-        "order_uuid": "291f6cb9-cfb9-4576-94e0-2b1278674639",
-        "datetime": "05-04-2012 20:55:31",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "291f6cb9-cfb9-4576-94e0-2b1278674639",
-        "datetime": "05-04-2012 22:26:37",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "ca8cde5d-fe86-4521-95e4-733f5936f602",
-        "datetime": "03-19-2018 10:29:22",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "roof_piston_TRA",
-            "system_name": "TRANSMISSION",
-            "manufacturer_id": 3333,
-            "part_number": 341237,
-            "serial_number": 3722120,
-            "ordered_by": "Racecar Palindrome"
-        }
-    },
-    {
-        "order_uuid": "ca8cde5d-fe86-4521-95e4-733f5936f602",
-        "datetime": "03-26-2018 22:31:17",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "ca8cde5d-fe86-4521-95e4-733f5936f602",
-        "datetime": "04-01-2018 23:07:18",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "9dcad3a1-86bf-40b6-918c-907fd3d54af1",
-        "datetime": "04-26-2024 08:18:11",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "bed_screw_ELE",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 3333,
-            "part_number": 578314,
-            "serial_number": 5467533,
-            "ordered_by": "Doe, John"
-        }
-    },
-    {
-        "order_uuid": "9dcad3a1-86bf-40b6-918c-907fd3d54af1",
-        "datetime": "05-01-2024 16:19:48",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "9dcad3a1-86bf-40b6-918c-907fd3d54af1",
-        "datetime": "05-07-2024 16:33:26",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "4915fae5-6e75-4411-a1be-3fbe9dad5779",
-        "datetime": "02-03-2019 07:56:30",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Wheel-well screw holder hyd",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 6467,
-            "part_number": 599284,
-            "serial_number": 7982188,
-            "ordered_by": "Doe, John"
-        }
-    },
-    {
-        "order_uuid": "4915fae5-6e75-4411-a1be-3fbe9dad5779",
-        "datetime": "02-05-2019 03:17:54",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "4915fae5-6e75-4411-a1be-3fbe9dad5779",
-        "datetime": "02-11-2019 23:01:26",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "12314fe0-4c11-43fc-b219-77b04f149643",
-        "datetime": "01-27-2024 07:24:26",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Driver flange ele 002",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 999158,
-            "serial_number": 6315004,
+            "manufacturer_id": 4445,
+            "part_number": 185049,
+            "serial_number": 6820735,
             "ordered_by": "richard.feynman"
         }
     },
     {
-        "order_uuid": "12314fe0-4c11-43fc-b219-77b04f149643",
-        "datetime": "02-04-2024 15:21:23",
+        "order_uuid": "bf8c2c2a-15bd-4232-af8a-fabe882d1ddb",
+        "datetime": "10-10-2010 21:34:24",
         "status": "SHIPPED"
     },
     {
-        "order_uuid": "12314fe0-4c11-43fc-b219-77b04f149643",
-        "datetime": "02-14-2024 09:56:39",
+        "order_uuid": "bf8c2c2a-15bd-4232-af8a-fabe882d1ddb",
+        "datetime": "10-13-2010 21:07:35",
         "status": "RECEIVED"
     },
     {
-        "order_uuid": "ce78aa32-1d7a-4712-90b4-850bf5758168",
-        "datetime": "08-31-2006 11:50:29",
+        "order_uuid": "1ffed166-7d95-4b9f-ac38-fcb8e516fc75",
+        "datetime": "09-15-2024 19:06:10",
         "status": "ORDERED",
         "details": {
-            "component_name": "Bed casing ele",
+            "component_name": "Wheel-well_piston_ele",
             "system_name": "ELECTRICAL",
-            "manufacturer_id": 3333,
-            "part_number": 637420,
-            "serial_number": 1986231,
-            "ordered_by": "Palindrome, Racecar"
-        }
-    },
-    {
-        "order_uuid": "ce78aa32-1d7a-4712-90b4-850bf5758168",
-        "datetime": "09-06-2006 04:14:10",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "ce78aa32-1d7a-4712-90b4-850bf5758168",
-        "datetime": "09-09-2006 13:51:53",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "1b4f7cd9-64cd-40ce-b181-b64d4e382fe7",
-        "datetime": "12-23-2005 20:27:51",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Driver_flange_ele_002",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 615844,
-            "serial_number": 3183784,
-            "ordered_by": "Doug Unicorn"
-        }
-    },
-    {
-        "order_uuid": "1b4f7cd9-64cd-40ce-b181-b64d4e382fe7",
-        "datetime": "12-27-2005 09:19:09",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "1b4f7cd9-64cd-40ce-b181-b64d4e382fe7",
-        "datetime": "01-05-2006 10:39:30",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "d4aca526-afa0-4aa8-aac9-d2feb19119cb",
-        "datetime": "04-10-1988 02:35:14",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "roof_o-ring_NAV",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 6467,
-            "part_number": 429943,
-            "serial_number": 4162815,
-            "ordered_by": "michael.scott"
-        }
-    },
-    {
-        "order_uuid": "d4aca526-afa0-4aa8-aac9-d2feb19119cb",
-        "datetime": "04-11-1988 20:35:53",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "d4aca526-afa0-4aa8-aac9-d2feb19119cb",
-        "datetime": "04-20-1988 06:45:26",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "ae9124b3-8687-4318-96f8-67bac9bc32a7",
-        "datetime": "04-13-1999 02:06:51",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Roof o-ring nav",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 6147,
-            "part_number": 496149,
-            "serial_number": 9417414,
-            "ordered_by": "John Doe"
-        }
-    },
-    {
-        "order_uuid": "ae9124b3-8687-4318-96f8-67bac9bc32a7",
-        "datetime": "04-21-1999 15:51:16",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "ae9124b3-8687-4318-96f8-67bac9bc32a7",
-        "datetime": "04-25-1999 09:07:39",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "32d5b84b-9555-4cee-a818-42e68e54e5b4",
-        "datetime": "09-25-1995 13:18:34",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Wheel-well wiring nav",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 1998,
-            "part_number": 740503,
-            "serial_number": 271964,
-            "ordered_by": "john.doe"
-        }
-    },
-    {
-        "order_uuid": "32d5b84b-9555-4cee-a818-42e68e54e5b4",
-        "datetime": "09-30-1995 01:24:40",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "32d5b84b-9555-4cee-a818-42e68e54e5b4",
-        "datetime": "10-02-1995 23:35:30",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "23cc8143-3c67-4aff-9030-3e093b54771d",
-        "datetime": "10-21-2003 16:54:19",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Roof_chassis_ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 2489,
-            "part_number": 970689,
-            "serial_number": 7887151,
-            "ordered_by": "jane.doe"
-        }
-    },
-    {
-        "order_uuid": "23cc8143-3c67-4aff-9030-3e093b54771d",
-        "datetime": "10-26-2003 22:12:26",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "23cc8143-3c67-4aff-9030-3e093b54771d",
-        "datetime": "11-02-2003 01:22:58",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "4d146c3d-7563-4d92-ae0e-c30c1da5abfa",
-        "datetime": "01-10-2015 13:31:00",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Engine-bay_screw_hyd_002",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 7957,
-            "part_number": 187556,
-            "serial_number": 4822422,
-            "ordered_by": "michael.scott"
-        }
-    },
-    {
-        "order_uuid": "4d146c3d-7563-4d92-ae0e-c30c1da5abfa",
-        "datetime": "01-13-2015 08:07:02",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "4d146c3d-7563-4d92-ae0e-c30c1da5abfa",
-        "datetime": "01-20-2015 11:10:33",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "228eed1d-71ac-4542-bd64-829472011d0a",
-        "datetime": "01-12-1989 00:06:01",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "cabin casing NAV",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 6467,
-            "part_number": 102059,
-            "serial_number": 5215427,
-            "ordered_by": "jane.doe"
-        }
-    },
-    {
-        "order_uuid": "228eed1d-71ac-4542-bd64-829472011d0a",
-        "datetime": "01-13-1989 16:28:08",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "228eed1d-71ac-4542-bd64-829472011d0a",
-        "datetime": "01-19-1989 17:49:54",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "021a7d1f-7e9d-4484-b4b2-8567ba936106",
-        "datetime": "04-12-1990 19:31:02",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Driver wiring ele",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 7957,
-            "part_number": 313506,
-            "serial_number": 854465,
-            "ordered_by": "Palindrome, Racecar"
-        }
-    },
-    {
-        "order_uuid": "021a7d1f-7e9d-4484-b4b2-8567ba936106",
-        "datetime": "04-21-1990 04:53:22",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "021a7d1f-7e9d-4484-b4b2-8567ba936106",
-        "datetime": "04-27-1990 04:39:54",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "195038ee-b26c-4129-a9ed-0b4ce6e1c822",
-        "datetime": "04-06-2011 03:43:33",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "wheel-well_wiring_NAV",
-            "system_name": "NAVIGATION",
-            "manufacturer_id": 3333,
-            "part_number": 899469,
-            "serial_number": 6110371,
+            "manufacturer_id": 5833,
+            "part_number": 731427,
+            "serial_number": 4797476,
             "ordered_by": "Racecar Palindrome"
         }
     },
     {
-        "order_uuid": "195038ee-b26c-4129-a9ed-0b4ce6e1c822",
-        "datetime": "04-08-2011 18:41:52",
+        "order_uuid": "1ffed166-7d95-4b9f-ac38-fcb8e516fc75",
+        "datetime": "09-20-2024 07:24:34",
         "status": "SHIPPED"
     },
     {
-        "order_uuid": "195038ee-b26c-4129-a9ed-0b4ce6e1c822",
-        "datetime": "04-11-2011 02:26:43",
+        "order_uuid": "1ffed166-7d95-4b9f-ac38-fcb8e516fc75",
+        "datetime": "09-21-2024 04:20:19",
         "status": "RECEIVED"
     },
     {
-        "order_uuid": "f63dcbdf-8563-4a80-8fa9-9c42a8e13215",
-        "datetime": "11-30-2007 09:04:20",
+        "order_uuid": "4256618b-edf7-49bb-b96e-05cae07003fc",
+        "datetime": "01-05-1999 04:45:18",
         "status": "ORDERED",
         "details": {
-            "component_name": "bed_drain_ELE",
+            "component_name": "driver_filter_holder_ELE",
             "system_name": "ELECTRICAL",
-            "manufacturer_id": 2489,
-            "part_number": 725819,
-            "serial_number": 2105926,
-            "ordered_by": "Palindrome, Racecar"
-        }
-    },
-    {
-        "order_uuid": "f63dcbdf-8563-4a80-8fa9-9c42a8e13215",
-        "datetime": "12-02-2007 10:06:13",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "f63dcbdf-8563-4a80-8fa9-9c42a8e13215",
-        "datetime": "12-09-2007 04:04:32",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "d967341e-75f7-4339-993f-986bdfc3a295",
-        "datetime": "05-03-2001 20:29:11",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "passenger_piston_HYD",
-            "system_name": "HYDRAULIC",
-            "manufacturer_id": 6147,
-            "part_number": 108775,
-            "serial_number": 4174501,
-            "ordered_by": "john.doe"
-        }
-    },
-    {
-        "order_uuid": "d967341e-75f7-4339-993f-986bdfc3a295",
-        "datetime": "05-05-2001 04:29:01",
-        "status": "SHIPPED"
-    },
-    {
-        "order_uuid": "d967341e-75f7-4339-993f-986bdfc3a295",
-        "datetime": "05-09-2001 14:24:39",
-        "status": "RECEIVED"
-    },
-    {
-        "order_uuid": "d18a5a4c-b17f-401d-9861-2dbbe50f5529",
-        "datetime": "09-18-2022 07:57:23",
-        "status": "ORDERED",
-        "details": {
-            "component_name": "Driver flange ele 002",
-            "system_name": "ELECTRICAL",
-            "manufacturer_id": 1998,
-            "part_number": 709011,
-            "serial_number": 7375962,
+            "manufacturer_id": 4445,
+            "part_number": 289270,
+            "serial_number": 8971943,
             "ordered_by": "Richard Feynman"
         }
     },
     {
-        "order_uuid": "d18a5a4c-b17f-401d-9861-2dbbe50f5529",
-        "datetime": "09-25-2022 03:31:48",
+        "order_uuid": "4256618b-edf7-49bb-b96e-05cae07003fc",
+        "datetime": "01-08-1999 18:14:11",
         "status": "SHIPPED"
     },
     {
-        "order_uuid": "d18a5a4c-b17f-401d-9861-2dbbe50f5529",
-        "datetime": "10-04-2022 13:30:17",
+        "order_uuid": "4256618b-edf7-49bb-b96e-05cae07003fc",
+        "datetime": "01-12-1999 04:06:57",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "cec9599b-d59c-44ff-9410-a320c08a9ce5",
+        "datetime": "02-13-2003 23:49:32",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof_chassis_ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 1205,
+            "part_number": 479619,
+            "serial_number": 3004893,
+            "ordered_by": "michael.scott"
+        }
+    },
+    {
+        "order_uuid": "cec9599b-d59c-44ff-9410-a320c08a9ce5",
+        "datetime": "02-18-2003 19:09:20",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "cec9599b-d59c-44ff-9410-a320c08a9ce5",
+        "datetime": "02-27-2003 06:24:56",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "a0c236af-d1a7-4186-b651-8ab6eed80087",
+        "datetime": "12-25-2011 18:21:25",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "passenger chassis ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 9657,
+            "part_number": 885296,
+            "serial_number": 7280118,
+            "ordered_by": "michael.scott"
+        }
+    },
+    {
+        "order_uuid": "a0c236af-d1a7-4186-b651-8ab6eed80087",
+        "datetime": "12-27-2011 19:08:54",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "a0c236af-d1a7-4186-b651-8ab6eed80087",
+        "datetime": "01-01-2012 11:31:23",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "63255dc6-27fc-4dc6-95ad-2af1fa09d894",
+        "datetime": "10-31-2020 09:20:06",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof_o-ring_HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 5833,
+            "part_number": 452191,
+            "serial_number": 5711138,
+            "ordered_by": "jane.doe"
+        }
+    },
+    {
+        "order_uuid": "63255dc6-27fc-4dc6-95ad-2af1fa09d894",
+        "datetime": "11-03-2020 12:12:29",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "63255dc6-27fc-4dc6-95ad-2af1fa09d894",
+        "datetime": "11-12-2020 17:59:16",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "a4bc1b09-85ca-4d3c-b93d-e6dddd72e358",
+        "datetime": "08-15-1996 08:16:35",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "passenger casing HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 4664,
+            "part_number": 552011,
+            "serial_number": 4342181,
+            "ordered_by": "Bolton, Michael"
+        }
+    },
+    {
+        "order_uuid": "a4bc1b09-85ca-4d3c-b93d-e6dddd72e358",
+        "datetime": "08-20-1996 01:25:46",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "a4bc1b09-85ca-4d3c-b93d-e6dddd72e358",
+        "datetime": "08-21-1996 23:03:08",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "084a6494-5755-4432-9587-fad88866b4df",
+        "datetime": "07-31-1988 09:51:05",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Driver_bearing_ele_001",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6106,
+            "part_number": 852485,
+            "serial_number": 1398712,
+            "ordered_by": "racecar.palindrome"
+        }
+    },
+    {
+        "order_uuid": "084a6494-5755-4432-9587-fad88866b4df",
+        "datetime": "08-05-1988 03:15:57",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "084a6494-5755-4432-9587-fad88866b4df",
+        "datetime": "08-05-1988 15:20:45",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "8ffac6be-ada2-4955-a104-39c7fcca5418",
+        "datetime": "02-05-2011 14:12:00",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "wheel-well_piston_HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 9657,
+            "part_number": 197150,
+            "serial_number": 9212191,
+            "ordered_by": "doug.unicorn"
+        }
+    },
+    {
+        "order_uuid": "8ffac6be-ada2-4955-a104-39c7fcca5418",
+        "datetime": "02-10-2011 19:00:24",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "8ffac6be-ada2-4955-a104-39c7fcca5418",
+        "datetime": "02-13-2011 00:33:36",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "08501099-4960-448a-b967-c36ab0975603",
+        "datetime": "02-01-2009 14:39:20",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "passenger filter HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 2089,
+            "part_number": 114499,
+            "serial_number": 6901107,
+            "ordered_by": "Picard, JL"
+        }
+    },
+    {
+        "order_uuid": "08501099-4960-448a-b967-c36ab0975603",
+        "datetime": "02-11-2009 00:59:07",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "08501099-4960-448a-b967-c36ab0975603",
+        "datetime": "02-16-2009 14:14:02",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "2a95b9b3-9941-4d2f-8608-1972c2e74360",
+        "datetime": "05-20-2016 07:42:46",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Driver_chassis_nav",
+            "system_name": "NAVIGATION",
+            "manufacturer_id": 6106,
+            "part_number": 342412,
+            "serial_number": 1556217,
+            "ordered_by": "John Doe"
+        }
+    },
+    {
+        "order_uuid": "2a95b9b3-9941-4d2f-8608-1972c2e74360",
+        "datetime": "05-24-2016 05:48:17",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "2a95b9b3-9941-4d2f-8608-1972c2e74360",
+        "datetime": "05-30-2016 13:06:59",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "9f6b631f-79ac-4cbb-a6db-6791271fbde7",
+        "datetime": "03-21-2000 21:58:20",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Roof filter ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4445,
+            "part_number": 351149,
+            "serial_number": 2373059,
+            "ordered_by": "Michael Bolton"
+        }
+    },
+    {
+        "order_uuid": "9f6b631f-79ac-4cbb-a6db-6791271fbde7",
+        "datetime": "03-27-2000 03:37:58",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "9f6b631f-79ac-4cbb-a6db-6791271fbde7",
+        "datetime": "04-02-2000 02:25:16",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "c350b992-43f0-4a16-b033-cd5c34db6b61",
+        "datetime": "11-18-1989 16:22:55",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Cabin flange ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4445,
+            "part_number": 196679,
+            "serial_number": 4036368,
+            "ordered_by": "Doe, John"
+        }
+    },
+    {
+        "order_uuid": "c350b992-43f0-4a16-b033-cd5c34db6b61",
+        "datetime": "11-22-1989 07:41:29",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "c350b992-43f0-4a16-b033-cd5c34db6b61",
+        "datetime": "11-27-1989 17:11:37",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "6d4d228e-5ffe-47f8-b856-4ebffe16bd07",
+        "datetime": "02-12-2022 12:14:31",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Driver wheel tra",
+            "system_name": "TRANSMISSION",
+            "manufacturer_id": 4445,
+            "part_number": 797694,
+            "serial_number": 7644222,
+            "ordered_by": "jane.doe"
+        }
+    },
+    {
+        "order_uuid": "6d4d228e-5ffe-47f8-b856-4ebffe16bd07",
+        "datetime": "02-15-2022 02:15:02",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "6d4d228e-5ffe-47f8-b856-4ebffe16bd07",
+        "datetime": "02-18-2022 21:13:49",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "5a5b8599-b877-4675-bf19-4b751f97085c",
+        "datetime": "02-06-1989 17:31:05",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "passenger_filter_ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 3904,
+            "part_number": 365631,
+            "serial_number": 8116544,
+            "ordered_by": "michael.bolton"
+        }
+    },
+    {
+        "order_uuid": "5a5b8599-b877-4675-bf19-4b751f97085c",
+        "datetime": "02-10-1989 18:45:18",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "5a5b8599-b877-4675-bf19-4b751f97085c",
+        "datetime": "02-20-1989 09:59:28",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "a6b4a7c2-eaec-48d3-8e58-955f024d4695",
+        "datetime": "07-12-2006 01:12:48",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "cabin_flange_NAV",
+            "system_name": "NAVIGATION",
+            "manufacturer_id": 3904,
+            "part_number": 151957,
+            "serial_number": 2146536,
+            "ordered_by": "Feynman, Richard"
+        }
+    },
+    {
+        "order_uuid": "a6b4a7c2-eaec-48d3-8e58-955f024d4695",
+        "datetime": "07-19-2006 16:15:20",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "a6b4a7c2-eaec-48d3-8e58-955f024d4695",
+        "datetime": "07-22-2006 00:01:54",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "d568220e-7ae5-49b8-8d0e-e9b2c64b0562",
+        "datetime": "10-01-2012 01:42:02",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger filter ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 5833,
+            "part_number": 720908,
+            "serial_number": 7950819,
+            "ordered_by": "Michael Scott"
+        }
+    },
+    {
+        "order_uuid": "d568220e-7ae5-49b8-8d0e-e9b2c64b0562",
+        "datetime": "10-01-2012 06:53:58",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "d568220e-7ae5-49b8-8d0e-e9b2c64b0562",
+        "datetime": "10-02-2012 18:38:22",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "43edc920-60f1-4db1-8aa4-2411eda4c71c",
+        "datetime": "11-21-1990 06:00:20",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger chassis ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6107,
+            "part_number": 133919,
+            "serial_number": 5229602,
+            "ordered_by": "Racecar Palindrome"
+        }
+    },
+    {
+        "order_uuid": "43edc920-60f1-4db1-8aa4-2411eda4c71c",
+        "datetime": "11-22-1990 18:19:04",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "43edc920-60f1-4db1-8aa4-2411eda4c71c",
+        "datetime": "12-02-1990 16:43:31",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "a7b3324d-f04b-4f54-b624-fa8a3c1b4bee",
+        "datetime": "01-02-2017 23:52:46",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger casing hyd",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 1205,
+            "part_number": 235458,
+            "serial_number": 2629400,
+            "ordered_by": "Palindrome, Racecar"
+        }
+    },
+    {
+        "order_uuid": "a7b3324d-f04b-4f54-b624-fa8a3c1b4bee",
+        "datetime": "01-04-2017 19:14:11",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "a7b3324d-f04b-4f54-b624-fa8a3c1b4bee",
+        "datetime": "01-13-2017 05:25:15",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "ae81f786-bbc9-4571-b55b-dcf52e2f7c64",
+        "datetime": "02-10-2022 11:34:39",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "driver_bearing_ELE_002",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 5833,
+            "part_number": 896844,
+            "serial_number": 8448133,
+            "ordered_by": "michael.bolton"
+        }
+    },
+    {
+        "order_uuid": "ae81f786-bbc9-4571-b55b-dcf52e2f7c64",
+        "datetime": "02-19-2022 06:40:09",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "ae81f786-bbc9-4571-b55b-dcf52e2f7c64",
+        "datetime": "02-23-2022 08:55:44",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "13bcc85b-b045-49c4-acec-f7a39a932cd6",
+        "datetime": "11-27-1997 15:50:14",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Roof o-ring hyd",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 5833,
+            "part_number": 993340,
+            "serial_number": 2991619,
+            "ordered_by": "Doe, Jane"
+        }
+    },
+    {
+        "order_uuid": "13bcc85b-b045-49c4-acec-f7a39a932cd6",
+        "datetime": "12-05-1997 16:58:19",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "13bcc85b-b045-49c4-acec-f7a39a932cd6",
+        "datetime": "12-07-1997 15:49:45",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "5411a4f9-fe0c-416e-ab54-6a4bf7ceb354",
+        "datetime": "02-26-2018 12:46:11",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof bolt HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 9531,
+            "part_number": 599661,
+            "serial_number": 2876862,
+            "ordered_by": "Doe, John"
+        }
+    },
+    {
+        "order_uuid": "5411a4f9-fe0c-416e-ab54-6a4bf7ceb354",
+        "datetime": "03-02-2018 19:46:28",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "5411a4f9-fe0c-416e-ab54-6a4bf7ceb354",
+        "datetime": "03-07-2018 18:39:03",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "81e1e06a-bb2e-4afc-ad43-10dea6937565",
+        "datetime": "08-15-2013 07:43:52",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Driver_wiring_nav",
+            "system_name": "NAVIGATION",
+            "manufacturer_id": 6106,
+            "part_number": 239111,
+            "serial_number": 9782517,
+            "ordered_by": "Richard Feynman"
+        }
+    },
+    {
+        "order_uuid": "81e1e06a-bb2e-4afc-ad43-10dea6937565",
+        "datetime": "08-19-2013 07:25:20",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "81e1e06a-bb2e-4afc-ad43-10dea6937565",
+        "datetime": "08-27-2013 06:43:26",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "34940bec-59c4-4059-b1ff-844037d42dba",
+        "datetime": "06-06-1995 22:11:35",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Engine-bay_flange_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4664,
+            "part_number": 346857,
+            "serial_number": 9654996,
+            "ordered_by": "michael.scott"
+        }
+    },
+    {
+        "order_uuid": "34940bec-59c4-4059-b1ff-844037d42dba",
+        "datetime": "06-09-1995 19:52:40",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "34940bec-59c4-4059-b1ff-844037d42dba",
+        "datetime": "06-17-1995 08:24:13",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "da4b25e0-6669-4055-b9af-b92248e7d5a3",
+        "datetime": "10-08-2015 00:34:28",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "passenger screw HYD 001",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 4445,
+            "part_number": 768023,
+            "serial_number": 7485241,
+            "ordered_by": "doug.unicorn"
+        }
+    },
+    {
+        "order_uuid": "da4b25e0-6669-4055-b9af-b92248e7d5a3",
+        "datetime": "10-15-2015 12:31:05",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "da4b25e0-6669-4055-b9af-b92248e7d5a3",
+        "datetime": "10-20-2015 19:05:55",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "d98fb8fc-07f3-4bab-bca7-a91cd002a056",
+        "datetime": "06-15-1999 02:45:06",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger chassis tra",
+            "system_name": "TRANSMISSION",
+            "manufacturer_id": 6106,
+            "part_number": 498216,
+            "serial_number": 3123329,
+            "ordered_by": "jl.picard"
+        }
+    },
+    {
+        "order_uuid": "d98fb8fc-07f3-4bab-bca7-a91cd002a056",
+        "datetime": "06-21-1999 08:30:51",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "d98fb8fc-07f3-4bab-bca7-a91cd002a056",
+        "datetime": "06-24-1999 04:50:35",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "986dd3c6-11fe-4ab6-8346-2f73f71ecf2b",
+        "datetime": "11-27-2010 21:33:45",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "cabin_flange_ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6107,
+            "part_number": 194104,
+            "serial_number": 392028,
+            "ordered_by": "jl.picard"
+        }
+    },
+    {
+        "order_uuid": "986dd3c6-11fe-4ab6-8346-2f73f71ecf2b",
+        "datetime": "11-28-2010 19:01:44",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "986dd3c6-11fe-4ab6-8346-2f73f71ecf2b",
+        "datetime": "12-01-2010 17:31:41",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "43ad478c-81f8-4d33-9d52-a89275d8d135",
+        "datetime": "04-08-2011 04:45:38",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof_tank_NAV",
+            "system_name": "NAVIGATION",
+            "manufacturer_id": 6107,
+            "part_number": 528472,
+            "serial_number": 6863452,
+            "ordered_by": "john.doe"
+        }
+    },
+    {
+        "order_uuid": "43ad478c-81f8-4d33-9d52-a89275d8d135",
+        "datetime": "04-10-2011 15:19:14",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "43ad478c-81f8-4d33-9d52-a89275d8d135",
+        "datetime": "04-11-2011 22:56:01",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "c62b570c-2cae-4b6e-8086-5643458ff093",
+        "datetime": "04-03-1995 01:48:51",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "driver_o-ring_ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4445,
+            "part_number": 884060,
+            "serial_number": 8966798,
+            "ordered_by": "michael.bolton"
+        }
+    },
+    {
+        "order_uuid": "c62b570c-2cae-4b6e-8086-5643458ff093",
+        "datetime": "04-04-1995 23:14:38",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "c62b570c-2cae-4b6e-8086-5643458ff093",
+        "datetime": "04-11-1995 18:43:37",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "8c9e3bc5-77ef-426d-9b9a-e572af2e1046",
+        "datetime": "03-15-2013 03:37:47",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "engine-bay_tank_HYD",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 4445,
+            "part_number": 952426,
+            "serial_number": 7591348,
+            "ordered_by": "john.doe"
+        }
+    },
+    {
+        "order_uuid": "8c9e3bc5-77ef-426d-9b9a-e572af2e1046",
+        "datetime": "03-18-2013 20:39:42",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "8c9e3bc5-77ef-426d-9b9a-e572af2e1046",
+        "datetime": "03-24-2013 12:03:47",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "aa1edd52-2688-42e8-b0af-592c20b3bcae",
+        "datetime": "06-27-1999 23:04:48",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof filter ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 9531,
+            "part_number": 884929,
+            "serial_number": 3186839,
+            "ordered_by": "Doe, Jane"
+        }
+    },
+    {
+        "order_uuid": "aa1edd52-2688-42e8-b0af-592c20b3bcae",
+        "datetime": "07-04-1999 20:16:19",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "aa1edd52-2688-42e8-b0af-592c20b3bcae",
+        "datetime": "07-08-1999 19:25:52",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "4e3dd438-b832-455f-9329-3d759c9b9c6a",
+        "datetime": "01-19-2000 11:03:31",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Roof drain ele 002",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4664,
+            "part_number": 234403,
+            "serial_number": 3102130,
+            "ordered_by": "michael.bolton"
+        }
+    },
+    {
+        "order_uuid": "4e3dd438-b832-455f-9329-3d759c9b9c6a",
+        "datetime": "01-25-2000 10:57:02",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "4e3dd438-b832-455f-9329-3d759c9b9c6a",
+        "datetime": "01-28-2000 11:53:41",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "4780c646-6f04-41e8-8ab2-bcb3eefd600a",
+        "datetime": "04-14-1989 05:26:05",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger filter ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4664,
+            "part_number": 703242,
+            "serial_number": 3998277,
+            "ordered_by": "Palindrome, Racecar"
+        }
+    },
+    {
+        "order_uuid": "4780c646-6f04-41e8-8ab2-bcb3eefd600a",
+        "datetime": "04-18-1989 09:40:36",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "4780c646-6f04-41e8-8ab2-bcb3eefd600a",
+        "datetime": "04-21-1989 01:46:28",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "d0bab42e-5a88-48f4-88a6-98c60bb32b91",
+        "datetime": "11-03-2023 13:28:12",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger_filter_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4445,
+            "part_number": 185974,
+            "serial_number": 8772929,
+            "ordered_by": "Palindrome, Racecar"
+        }
+    },
+    {
+        "order_uuid": "d0bab42e-5a88-48f4-88a6-98c60bb32b91",
+        "datetime": "11-05-2023 10:28:54",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "d0bab42e-5a88-48f4-88a6-98c60bb32b91",
+        "datetime": "11-15-2023 06:18:11",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "58d06221-e59f-4f94-b3ad-21bbc5e3e070",
+        "datetime": "01-14-1996 15:59:51",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger o-ring ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 1205,
+            "part_number": 308214,
+            "serial_number": 6636343,
+            "ordered_by": "racecar.palindrome"
+        }
+    },
+    {
+        "order_uuid": "58d06221-e59f-4f94-b3ad-21bbc5e3e070",
+        "datetime": "01-20-1996 07:00:45",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "58d06221-e59f-4f94-b3ad-21bbc5e3e070",
+        "datetime": "01-28-1996 15:45:26",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "bd62678f-4260-4aee-855d-b7f9f953e2a2",
+        "datetime": "12-29-1998 01:22:18",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Engine-bay_screw_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 2089,
+            "part_number": 888730,
+            "serial_number": 2203009,
+            "ordered_by": "JL Picard"
+        }
+    },
+    {
+        "order_uuid": "bd62678f-4260-4aee-855d-b7f9f953e2a2",
+        "datetime": "12-31-1998 21:02:07",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "bd62678f-4260-4aee-855d-b7f9f953e2a2",
+        "datetime": "01-03-1999 09:08:43",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "ba5bc7cc-44ce-4a07-ab7e-0b4f6aa2690c",
+        "datetime": "12-06-2016 03:25:15",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Bed_sensor_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6107,
+            "part_number": 715810,
+            "serial_number": 7888890,
+            "ordered_by": "Palindrome, Racecar"
+        }
+    },
+    {
+        "order_uuid": "ba5bc7cc-44ce-4a07-ab7e-0b4f6aa2690c",
+        "datetime": "12-06-2016 09:50:42",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "ba5bc7cc-44ce-4a07-ab7e-0b4f6aa2690c",
+        "datetime": "12-09-2016 00:39:55",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "0136b3d9-94c3-4d7e-a6a5-d7326f79e14b",
+        "datetime": "03-12-2022 16:21:28",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger screw hyd 001",
+            "system_name": "HYDRAULIC",
+            "manufacturer_id": 4664,
+            "part_number": 357908,
+            "serial_number": 6974089,
+            "ordered_by": "michael.scott"
+        }
+    },
+    {
+        "order_uuid": "0136b3d9-94c3-4d7e-a6a5-d7326f79e14b",
+        "datetime": "03-13-2022 12:08:13",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "0136b3d9-94c3-4d7e-a6a5-d7326f79e14b",
+        "datetime": "03-21-2022 15:14:04",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "eaabfa2d-7867-4884-a505-5510a00cdae6",
+        "datetime": "07-01-2002 13:41:11",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "cabin wheel stabilizer ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4664,
+            "part_number": 755956,
+            "serial_number": 3416439,
+            "ordered_by": "JL Picard"
+        }
+    },
+    {
+        "order_uuid": "eaabfa2d-7867-4884-a505-5510a00cdae6",
+        "datetime": "07-02-2002 04:19:56",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "eaabfa2d-7867-4884-a505-5510a00cdae6",
+        "datetime": "07-04-2002 06:05:17",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "a4b47da5-f9ed-41bb-9d75-d115743667a2",
+        "datetime": "01-17-2006 22:43:36",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Roof_drain_ele_001",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6106,
+            "part_number": 737790,
+            "serial_number": 4271614,
+            "ordered_by": "Bolton, Michael"
+        }
+    },
+    {
+        "order_uuid": "a4b47da5-f9ed-41bb-9d75-d115743667a2",
+        "datetime": "01-18-2006 01:09:20",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "a4b47da5-f9ed-41bb-9d75-d115743667a2",
+        "datetime": "01-20-2006 16:05:04",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "1bb628bf-64ea-439f-9f7b-3623c70babc4",
+        "datetime": "04-19-1998 13:43:45",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "roof_pump_ELE",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 4445,
+            "part_number": 301728,
+            "serial_number": 7493131,
+            "ordered_by": "Michael Bolton"
+        }
+    },
+    {
+        "order_uuid": "1bb628bf-64ea-439f-9f7b-3623c70babc4",
+        "datetime": "04-25-1998 00:45:58",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "1bb628bf-64ea-439f-9f7b-3623c70babc4",
+        "datetime": "05-04-1998 18:16:26",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "2f5ad8c6-c544-4a7b-9eda-7b09fee89497",
+        "datetime": "09-04-2012 05:38:43",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Passenger_chassis_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 3904,
+            "part_number": 394009,
+            "serial_number": 1613335,
+            "ordered_by": "John Doe"
+        }
+    },
+    {
+        "order_uuid": "2f5ad8c6-c544-4a7b-9eda-7b09fee89497",
+        "datetime": "09-08-2012 22:38:18",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "2f5ad8c6-c544-4a7b-9eda-7b09fee89497",
+        "datetime": "09-18-2012 19:22:37",
+        "status": "RECEIVED"
+    },
+    {
+        "order_uuid": "bf0e10e6-af8d-4e2d-994d-9193538a2dee",
+        "datetime": "09-25-2006 18:34:36",
+        "status": "ORDERED",
+        "details": {
+            "component_name": "Cabin_weld_stabilizer_ele",
+            "system_name": "ELECTRICAL",
+            "manufacturer_id": 6107,
+            "part_number": 958647,
+            "serial_number": 1762686,
+            "ordered_by": "Bolton, Michael"
+        }
+    },
+    {
+        "order_uuid": "bf0e10e6-af8d-4e2d-994d-9193538a2dee",
+        "datetime": "09-27-2006 09:53:38",
+        "status": "SHIPPED"
+    },
+    {
+        "order_uuid": "bf0e10e6-af8d-4e2d-994d-9193538a2dee",
+        "datetime": "10-02-2006 11:12:29",
         "status": "RECEIVED"
     }
 ]

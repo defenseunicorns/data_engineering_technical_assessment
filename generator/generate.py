@@ -10,6 +10,7 @@ from parts import get_parts
 NUM_ORDERS = 500
 STATUS = ['PENDING', 'ORDERED', 'SHIPPED', 'RECEIVED']
 PRIORITY_PROB = .1
+CORRUPT_PROB = .02
 BASE_BREAK_PROB = .001
 START_DATE = pd.to_datetime("1988-01-01")
 END_DATE = pd.to_datetime("2025-01-01")
@@ -150,9 +151,26 @@ def create_streaming(df:pd.DataFrame):
    with open(f"{GENERATE_PATH}streaming_orders.json", "w") as fh:
       json.dump(pri_json, fh, indent=4)
 
+def corrupt_users(df:pd.DataFrame):
+   frames = []
+   users = df["ordered_by"].unique().tolist()
+   for uid, frame in df.groupby("order_uuid"):
+      if np.random.random() < CORRUPT_PROB:
+         frame.sort_values("status_date", ascending=True).reset_index(drop=True)
+         status = frame['status'].values.tolist()[-1]
+         user = np.random.choice(users, 1)[0]
+         print(status, user)
+         frame.loc[frame['status']==status, "ordered_by"] = user
+         frames.append(frame)
+      else:
+         frames.append(frame)
+   return pd.concat(frames)
+
+
 def create_parquet(df):
    frame = df[~df['comp_pri']].reset_index(drop=True)
    frame.loc[frame["status"]!="PENDING", "ordered_by"] = None
+   frame = corrupt_users(frame)
    frame = frame.iloc[np.random.permutation(len(frame))]
    frame = frame.drop(columns=["comp_pri"])
    frame.to_csv(f"{GENERATE_PATH}batch_orders.csv", index=False)
