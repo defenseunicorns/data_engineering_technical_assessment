@@ -50,39 +50,6 @@ Be prepared to answer questions about the design and implementation of the stora
 * If you could design the storage from scratch, what would you change?
    * Many things could change, should probably at least wonder about the implementation of the `allowed_parts` table and connections -- foreign keys could be replaced by an on insert trigger, for example.
 
-## Development and Evaluation
-Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
-* `make help` - shows major targets
-* `make help-dev` - shows helper targets
-* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql`
-* `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose
-
-Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
-
-### Development Environment
-Requirements:
-* Internet connection (for pulling images from DockerHub)
-* Docker
-* Python 3.8+: If you need to use a lower version of python, make sure to change the `/rc/Dockerfile` and `requirements.txt` as the ingestion script will be run by that image.
-
-Use `make dev-up` to stand up the database.  Here is a list of files for the solution:
-* `src/ingest.py` entrypoint for ingestion, modify the `ingest_data()` method.
-* `src/comms.py` contains a framework to connect to the postgres instance.
-* `src/requirements.txt` keep track of dependencies here for the solution image to build.
-
-If you include additionaly libraries or dependencies in your ingestion script, make sure you add them to `/src/requirements.txt` for the docker image to build and run successfully.
-
-### Testing your solution
-
-You may develop tests for your solution in the `/src/tests.py` file.  The default way these are implemented are using pytest, which will run any method that begins with `test`.  To run the tests, you can run `make run-tests` from the parent directory or `python -m pytest tests.py` from `src/`.
-
-### Submission
-
-The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose.  We will then run some automated tests against the data in postgres.  Once you are satisfied, push your code up to your submission branch.
-
-As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup)
-* `submission/pg_dump.tar.gz` - pg_dump of orders database
-
 ## Data diagram
 
 ![connections in schema and parquet dump](./docs/schema.png "Data Schema")
@@ -181,3 +148,38 @@ The `details` field is optional and is only included on `ORDERED` status message
 * Transform the user names into `first_name.last_name` format
 * Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
 * The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries
+
+## Development and Evaluation
+Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
+* `make help` - shows major targets
+* `make help-dev` - shows helper targets
+* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql`
+* `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose
+
+Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
+
+### Development Environment
+Requirements:
+* Internet connection (for pulling images from DockerHub)
+* Docker
+* Python 3.8+: If you need to use a lower version of python, make sure to change the `/rc/Dockerfile` and `requirements.txt` as the ingestion script will be run by that image.
+
+Use `make dev-up` to stand up the database.  Here is a list of files for the solution:
+* `src/ingest.py` entrypoint for ingestion, modify the `ingest_data()` method.
+* `src/comms.py` contains a framework to connect to the postgres instance.
+* `src/requirements.txt` keep track of dependencies here for the solution image to build.
+
+If you include additionaly libraries or dependencies in your ingestion script, make sure you add them to `/src/requirements.txt` for the docker image to build and run successfully.
+
+### Testing your solution
+
+You may develop tests for your solution in the `/src/tests.py` file.  The default way these are implemented are using pytest, which will run any method that begins with `test`.  To run the tests, you can run `make run-tests` from the parent directory or `python -m pytest tests.py` from `src/`.
+
+It is recommended for you to run an end-2-end test using docker compose.  This will tear down and rebuild the postgres database from scratch using the ingestion image.  You can run this test with `make ingest`, which will also save the logs from the ingestion container to `submission/solution_logs.txt`.  This is not required to pass but is recommended to ensure the automated tests run successfully.
+
+### Submission
+
+The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose.  We will then run some automated tests against the data in postgres.  Once you are satisfied, push your code up to your submission branch.
+
+As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup if there are problems with the container image)
+* `submission/pg_dump.tar.gz` - pg_dump of orders database
