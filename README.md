@@ -72,7 +72,6 @@ If you include additionaly libraries or dependencies in your ingestion script, m
 ### Testing your solution
 
 
-
 ### Submission
 
 The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose.  We will then run some automated tests against the data in postgres.  Once you are satisfied, push your code up to your submission branch.
