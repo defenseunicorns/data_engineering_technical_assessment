@@ -32,6 +32,10 @@ dev-up: ## Brings up a fresh postgresql server available on localhost:5432
 	sleep 2
 	$(MAKE) _test-schema-up
 
+.PHONY: _test-pg-dump
+_test-pg-dump: #_# Executes a pg dump of the orders database to submissions
+	docker exec postgres pg_dump -U orders -F t orders | gzip >./submission/pg_dump.tar.gz
+
 .PHONY: _test-postgres-up
 _test-postgres-up: #_# Brings up a postgres container with the correct database / user / password
 	docker run \
