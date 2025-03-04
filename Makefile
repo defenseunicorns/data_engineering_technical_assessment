@@ -90,4 +90,4 @@ _test-compose-down: #_# Brings down the docker compose solution
 .PHONY: _test-compose-logs
 _test-compose-logs: #_# streams the logs of the solution container and saves them to submission directory
 	docker compose logs solution -f
-	docker compose logs solution -t >> submission/solution_logs.txt
+	docker compose logs solution -t >> solution_logs.txt

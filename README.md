@@ -177,7 +177,7 @@ If you include additionaly libraries or dependencies in your ingestion script, m
 
 You may develop tests for your solution in the `/src/tests.py` file.  The default way these are implemented are using pytest, which will run any method that begins with `test`.  To run the tests, you can run `make run-tests` from the parent directory or `python -m pytest tests.py` from `src/`.
 
-It is recommended for you to run an end-2-end test using docker compose.  This will tear down and rebuild the postgres database from scratch using the ingestion image.  You can run this test with `make ingest`, which will also save the logs from the ingestion container to `submission/solution_logs.txt`.  This is not required to pass but is recommended to ensure the automated tests run successfully.
+It is recommended for you to run an end-2-end test using docker compose.  This will tear down and rebuild the postgres database from scratch using the ingestion image.  You can run this test with `make ingest`, which will also save the logs from the ingestion container to `solution_logs.txt`.  This is not required to pass but is recommended to ensure the automated tests run successfully.
 
 ### Submission
 
@@ -185,5 +185,6 @@ The primary way we will evaluate your submission is to build and run the solutio
 
 As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup if there are problems with the container image)
 * `submission/pg_dump.tar.gz` - pg_dump of orders database
+* `src.tar.gz` - tarball of the `src` directory
 
 Once you are satisifed with your solution and have created the pg_dump file, push your full solution to your branch.
