@@ -30,7 +30,9 @@ _test-postgres-up: #_# Brings up a postgres container with the correct database 
 		-p 5432:5432 \
 		-e POSTGRES_USER=orders \
 		-e POSTGRES_PASSWORD=s3cr3tp455w0rd \
-		-e POSTGRES_DB=orders -d postgres
+		-e POSTGRES_DB=orders \
+		-d \
+		postgres:17.4
 
 .PHONY: _test-postgres-down
 _test-postgres-down: #_# Brings down the postgres container
@@ -40,3 +42,7 @@ _test-postgres-down: #_# Brings down the postgres container
 .PHONY: _test-schema-up
 _test-schema-up: #_# Creates the database schema for psql
 	cat ./postgres/schema.sql | docker exec -i postgres psql -U orders -d orders
+
+.PHONY: _test-build-solution
+_test-build-solution: #_# Creates the docker image of the solution
+	docker build -t solution:latest -f ./src/Dockerfile .

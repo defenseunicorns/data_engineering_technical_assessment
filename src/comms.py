@@ -1,6 +1,8 @@
-from sqlalchemy import create_engine, MetaData, Table
-from sqlalchemy.sql import text
+from sqlalchemy import create_engine, MetaData, Table, engine
+from sqlalchemy.sql import text, select
+import psycopg2
 from logs import get_logger, setup_logging
+import os
 
 import pandas as pd
 
@@ -10,6 +12,11 @@ ENGINES = dict()
 USER = "orders"
 PWD = "s3cr3tp455w0rd"
 DB = "orders"
+HOST = os.environ.get("PG_HOST", "localhost")
+
+def get_table(table, con, schema=None):
+   meta = MetaData(schema=schema)
+   return Table(table, meta, autoload_with=con)
 
 def get_connection_string():
    user = USER
@@ -19,7 +26,7 @@ def get_connection_string():
    con_str = f"postgresql+psycopg2://{user}:{pwd}@{host}:5432/{db}"
    return con_str
 
-def get_engine():
+def get_sqlalchemy_engine() -> engine.Engine :
    if "local" not in ENGINES:
       ENGINES["local"] = create_engine(get_connection_string())
    else:
@@ -31,3 +38,45 @@ def get_engine():
          log.warning(f'Error connectin to postgres engine: {e}')
          ENGINES["local"] = create_engine(get_connection_string())
    return ENGINES["local"]
+
+def get_psycopg2_connection() -> psycopg2.extensions.connection:
+   connection_dict = {
+      'dbname': DB,
+      'user': USER,
+      'password': PWD,
+      'port': 5432,
+      'host': "localhost"
+   }
+   return psycopg2.connect(**connection_dict)
+
+def test_connections():
+   log.info(f'Testing sqlalchemy engine')
+   eng = get_sqlalchemy_engine()
+   try:
+      with eng.connect() as con:
+         con.execute(text("SELECT 1"))
+      log.info("sqlalchemy connection works")
+   except Exception as e:
+      log.warning(f"Error with sqlalchemy connection: {e}")
+
+   log.info("Testing psycopg2 connection")
+   try:
+      con = get_psycopg2_connection()
+      with con.cursor() as con:
+         res = con.execute("SELECT 1;")
+      log.info("psyscopg2 connection works")
+   except Exception as e:
+      log.warning(f"Error with psycopg2 connection: {e}")
+
+def check_schema():
+   log.info(f"Running postgres/schema.sql")
+   eng = get_sqlalchemy_engine()
+   with open("../postgres/schema.sql", "r") as fh:
+      sql = text(fh.read())
+      with eng.connect() as con:
+         con.execute(sql)
+         con.commit()
+         info = get_table("tables", con, schema="information_schema")
+         table_q = select(info.c.table_name, info.c.table_type).where(info.c.table_schema=="public")
+         df = pd.read_sql(table_q, con)
+         log.info(f"Tables:\n{df}")
