@@ -32,6 +32,15 @@ dev-up: ## Brings up a fresh postgresql server available on localhost:5432
 	sleep 2
 	$(MAKE) _test-schema-up
 
+.PHONY: submit
+submit: ## Gets a pg_dump of the orders database and saves to submission/pg_dump.tar.gz
+	if test -d "./submission"; then \
+		echo "submission Directory exists"; \
+	else \
+		mkdir submission; \
+	fi
+	$(MAKE) _test-pg-dump
+
 .PHONY: run-tests
 run-tests: ## Runs the tests in src/tests.py using pytest
 	cd src && python -m pytest tests.py
