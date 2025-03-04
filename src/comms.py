@@ -20,7 +20,7 @@ def get_table(table, con, schema=None):
 
 def get_connection_string():
    user = USER
-   host = "localhost"
+   host = HOST
    pwd = PWD
    db = DB
    con_str = f"postgresql+psycopg2://{user}:{pwd}@{host}:5432/{db}"
@@ -45,11 +45,12 @@ def get_psycopg2_connection() -> psycopg2.extensions.connection:
       'user': USER,
       'password': PWD,
       'port': 5432,
-      'host': "localhost"
+      'host': HOST
    }
    return psycopg2.connect(**connection_dict)
 
 def test_connections():
+   """Tests the psycopg2 connection and sqlalchemy engine"""
    log.info(f'Testing sqlalchemy engine')
    eng = get_sqlalchemy_engine()
    try:
@@ -69,6 +70,7 @@ def test_connections():
       log.warning(f"Error with psycopg2 connection: {e}")
 
 def check_schema():
+   """Runs the CREATE TABLE statements and checks the tables"""
    log.info(f"Running postgres/schema.sql")
    eng = get_sqlalchemy_engine()
    with open("../postgres/schema.sql", "r") as fh:

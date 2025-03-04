@@ -40,6 +40,14 @@ Be prepared to answer the following questions:
 * If you could design the storage from scratch, what would you change?
    * Many things could change, should probably at least wonder about the implementation of the `allowed_parts` table and connections -- foreign keys could be replaced by an on insert trigger, for example.
 
+## Development and Evaluation
+
+### Development Environment
+Requirements:
+* Internet connection (for pulling images from DockerHub)
+* Docker
+* Python 3.x
+
 ## Data diagram
 
 ![connections in schema and parquet dump](./docs/schema.png "Data Schema")

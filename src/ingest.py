@@ -7,7 +7,7 @@ log = get_logger()
 
 # IMPLEMENT THIS METHOD
 def ingest_data():
-   test_connections()
+   pass
 
 if __name__ == "__main__":
    setup_logging()

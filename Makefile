@@ -23,6 +23,10 @@ help-dev: ## Show available dev-facing targets
 	| sed -n 's/^\(.*\): \(.*\)#_#\(.*\)/\1:\3/p' \
 	| column -t -s ":"
 
+.PHONY: dev-up
+dev-up: ## Brings up a fresh postgresql server available on localhost:5432
+	$(MAKE) _test-postgres-down _test-postgres-up _test-schema-up
+
 .PHONY: _test-postgres-up
 _test-postgres-up: #_# Brings up a postgres container with the correct database / user / password
 	docker run \
