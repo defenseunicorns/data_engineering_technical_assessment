@@ -1,5 +1,12 @@
 # Defense Unicorns - Data Engineering Practical
 
+## Quickstart
+* Clone this repository
+* Create a branch `git branch submission/first-last` / `git switch submission/first-last`
+* Develop and test your solution
+* Run `make submit`
+* push your branch: `git commit` and `git push origin submission/first-last`
+
 ## Overview
 
 This exercise is designed to assess a data engineering candidate’s ability to manipulate data programmatically, analyze insights, and demonstrate their thought process in designing data systems. Candidates should complete the assessment within a four-hour time limit for code submission.
@@ -64,15 +71,13 @@ If you include additionaly libraries or dependencies in your ingestion script, m
 
 ### Testing your solution
 
+
+
 ### Submission
 
-The primary way we will evaluate your submission is to stand up postgres and run your solution image against the schema and data sources.
+The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose.  We will then run some automated tests against the data in postgres.  Once you are satisfied, push your code up to your submission branch.
 
-As a backup, please run `make submit` which will build the following artifacts as a tarball (again this is a backup)
-* `submission/components.csv` - dump of filled components table
-* `submission/parts.csv` - dump of filled parts table
-* `submission/users.csv` - dump of users table
-* `submission/allowed.csv` - dump of allowed_parts table
+As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup)
 * `submission/pg_dump.tar.gz` - pg_dump of orders database
 
 ## Data diagram
