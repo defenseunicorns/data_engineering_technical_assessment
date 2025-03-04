@@ -158,6 +158,8 @@ Most of the setup can be done via Make targets.  Here is a list of the relevant 
 
 Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
 
+During development, feel free to push commits to your branch.  The automated tests will not be run until after the time has expired.
+
 ### Development Environment
 Requirements:
 * Internet connection (for pulling images from DockerHub)
@@ -179,7 +181,9 @@ It is recommended for you to run an end-2-end test using docker compose.  This w
 
 ### Submission
 
-The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose.  We will then run some automated tests against the data in postgres.  Once you are satisfied, push your code up to your submission branch.
+The primary way we will evaluate your submission is to build and run the solution image against postgres using docker-compose, similar to the `make ingest` target.  We will then run some automated tests against the data in postgres.
 
 As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup if there are problems with the container image)
 * `submission/pg_dump.tar.gz` - pg_dump of orders database
+
+Once you are satisifed with your solution and have created the pg_dump file, push your full solution to your branch.
