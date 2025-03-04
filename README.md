@@ -42,13 +42,9 @@ What is required to "pass" this assessment is to successfully populate the `comp
 <!-- TODO: remove sample answers -->
 Be prepared to answer questions about the design and implementation of the storage.  Examples include:
 * Are there any important pieces of legacy information lost in the current schema?
-   * Good answer: `order_uuid` from the supplier and the full history of status changes
-* How would you modify the schema if you wanted to include that information?
-   * Good answer: make a separate orders table and order_history table, add `order_uuid` to orders table
+* Assuming a year of orders are kept in the database before being moved to cold storage, how many orders per year would you feel comfortable supporting with this architecture?
 * If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc)?
-   * Many ways to do this, just looking to see if they are thinking about filtering orders by system etc.
 * If you could design the storage from scratch, what would you change?
-   * Many things could change, should probably at least wonder about the implementation of the `allowed_parts` table and connections -- foreign keys could be replaced by an on insert trigger, for example.
 
 ## Data diagram
 
@@ -99,7 +95,7 @@ This is the main table to track orders.  It has the following fields:
 * `ordered_by`: References `users.user_id` that submitted the order
 * `status`: VARCHAR(16), current order status. valid entries are `PENDING`, `ORDERED`, `SHIPPED`, and `RECEIVED`
 * `status_date`: Datetime the `status` field was set or updated
-* an `order_id` is uniquely defined by the combination of `comopnent_id`, `part_id`, `serial_no`, and `order_date`.
+* an `order_id` is uniquely defined by the combination of `comopnent_id`, `part_id`, and `serial_no`.
 * The `component_id`, `part_id` pairing must exist in the `allowed_parts` table
 
 ## Data descriptions - Data dumps
@@ -141,7 +137,7 @@ The streaming data json has the following schema:
    }
 }
 ```
-The `details` field is optional and is only included on `ORDERED` status messages.
+The `details` field is optional and is only included on `ORDERED` status messages.  For a given order, the messages are found in chronological order in the json dump, although the orders themselves are jumbled.  Build a method to handle these on a message by message basis.
 
 ### Cleaning required
 * Transform the component names into `lowercase_with_underscore_spaces` format

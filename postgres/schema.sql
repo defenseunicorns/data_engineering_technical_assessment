@@ -34,5 +34,5 @@ CREATE TABLE IF NOT EXISTS orders (
   status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
   status_date TIMESTAMP,
   FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id),
-  UNIQUE (component_id, part_id, serial_no, order_date)
+  UNIQUE (component_id, part_id, serial_no)
 );
