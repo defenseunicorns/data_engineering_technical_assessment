@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS parts (
 CREATE TABLE IF NOT EXISTS allowed_parts (
   component_id INT REFERENCES components(component_id) ON DELETE CASCADE,
   part_id INT REFERENCES parts(part_id) ON DELETE CASCADE,
-  deprecated BOOLEAN  -- FLAG FOR A PART / COMPONENT PAIRING THAT IS NO LONGER ALLOWED
+  deprecated BOOLEAN,  -- FLAG FOR A PART / COMPONENT PAIRING THAT IS NO LONGER ALLOWED
   PRIMARY KEY (component_id, part_id)
 );
 
@@ -29,10 +29,10 @@ CREATE TABLE IF NOT EXISTS orders (
   part_id INT REFERENCES parts(part_id) ON DELETE SET NULL,
   serial_no INT,
   comp_priority BOOLEAN,
-  order_date DATETIME,
+  order_date TIMESTAMP,
   ordered_by INT REFERENCES users(user_id),
   status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
-  status_date DATETIME,
+  status_date TIMESTAMP,
   FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id),
   UNIQUE (component_id, part_id, serial_no, order_date)
 );
