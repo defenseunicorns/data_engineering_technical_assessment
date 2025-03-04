@@ -4,7 +4,10 @@
 * Clone this repository
 * Create a branch `git branch submission/first-last` / `git switch submission/first-last`
 * Develop and test your solution
-* Run `make submit`
+   * You can write 
+* Run `make submit` to create the pg_dump file
+* Run `make ingest` to test full ingestion in docker compose
+   * WARNING: This will reset your postgres database
 * push your branch: `git commit` and `git push origin submission/first-last`
 
 ## Overview

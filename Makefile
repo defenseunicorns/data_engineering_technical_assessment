@@ -24,22 +24,19 @@ help-dev: ## Show available dev-facing targets
 	| column -t -s ":"
 
 .PHONY: dev-up
-dev-up: ## Brings up a fresh postgresql server available on localhost:5432
-	if [ "$(shell docker ps -a -q -f name=postgres)"  ]; then \
-		$(MAKE) _test-postgres-down; \
-	fi
-	$(MAKE) _test-postgres-up
+dev-up: ## Brings up a fresh postgresql server available on localhost port 5432
+	$(MAKE) _test-postgres-down _test-postgres-up
 	sleep 2
 	$(MAKE) _test-schema-up
 
 .PHONY: submit
 submit: ## Gets a pg_dump of the orders database and saves to submission/pg_dump.tar.gz
-	if test -d "./submission"; then \
-		echo "submission Directory exists"; \
-	else \
-		mkdir submission; \
-	fi
-	$(MAKE) _test-pg-dump
+	$(MAKE) _test-check-submission-dir _test-pg-dump
+
+.PHONY: ingest
+ingest: ## WARNING This will recycle the postgres deployment.  Runs a full ingestion test with docker compose
+	$(MAKE) _test-postgres-down _test-build-solution_test-compose-solution
+	$(MAKE) _test-check-submission-dir _test-compose-logs _test-compose-down
 
 .PHONY: run-tests
 run-tests: ## Runs the tests in src/tests.py using pytest
@@ -62,8 +59,17 @@ _test-postgres-up: #_# Brings up a postgres container with the correct database 
 
 .PHONY: _test-postgres-down
 _test-postgres-down: #_# Brings down the postgres container
-	docker stop postgres
-	docker remove postgres
+	if [ "$(shell docker ps -q -f name=postgres)" ]; then \
+		docker stop "$(shell docker ps -q -f name=postgres)"; \
+		docker remove "$(shell docker ps -q -f name=postgres)"; \
+	fi
+
+.PHONY: _test-check-submission-dir
+_test-check-submission-dir: #_# Creates the submission directory if it doesn't exist
+	if test -d "./submission"; then \
+		echo "submission Directory exists"; \
+	else \
+		mkdir submission; \
 
 .PHONY: _test-schema-up
 _test-schema-up: #_# Creates the database schema for psql
@@ -72,3 +78,16 @@ _test-schema-up: #_# Creates the database schema for psql
 .PHONY: _test-build-solution
 _test-build-solution: #_# Creates the docker image of the solution
 	docker build -t solution:latest -f ./src/Dockerfile .
+
+.PHONY: _test-compose-solution
+_test-compose-solution: #_# gets the solution up and running
+	docker compose up -d
+
+.PHONY: _test-compose-down
+_test-compose-down: #_# Brings down the docker compose solution
+	docker compose down
+
+.PHONY: _test-compose-logs
+_test-compose-logs: #_# streams the logs of the solution container and saves them to submission directory
+	docker compose logs solution -f
+	docker compose logs solution -t >> submission/solution_logs.txt
