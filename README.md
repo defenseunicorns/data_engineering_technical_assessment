@@ -71,6 +71,7 @@ If you include additionaly libraries or dependencies in your ingestion script, m
 
 ### Testing your solution
 
+You may develop tests for your solution in the `/src/tests.py` file.  The default way these are implemented are using pytest, which will run any method that begins with `test`.  To run the tests, you can run `make run-tests` from the parent directory or `python -m pytest tests.py` from `src/`.
 
 ### Submission
 

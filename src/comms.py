@@ -75,10 +75,11 @@ def check_schema():
    eng = get_sqlalchemy_engine()
    with open("../postgres/schema.sql", "r") as fh:
       sql = text(fh.read())
-      with eng.connect() as con:
-         con.execute(sql)
-         con.commit()
-         info = get_table("tables", con, schema="information_schema")
-         table_q = select(info.c.table_name, info.c.table_type).where(info.c.table_schema=="public")
-         df = pd.read_sql(table_q, con)
-         log.info(f"Tables:\n{df}")
+   with eng.connect() as con:
+      con.execute(sql)
+      con.commit()
+      info = get_table("tables", con, schema="information_schema")
+      table_q = select(info.c.table_name, info.c.table_type).where(info.c.table_schema=="public")
+      df = pd.read_sql(table_q, con)
+      log.info(f"Tables:\n{df}")
+   return df
