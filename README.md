@@ -30,23 +30,50 @@ What is required to "pass" this assessment is to successfully populate the `comp
 
 ### Questions
 <!-- TODO: remove sample answers -->
-Be prepared to answer the following questions:
-* What are two important pieces of information lost in the current schema
+Be prepared to answer questions about the design and implementation of the storage.  Examples include:
+* Are there any important pieces of legacy information lost in the current schema?
    * Good answer: `order_uuid` from the supplier and the full history of status changes
-* How would you modify the schema if you wanted to include that information
+* How would you modify the schema if you wanted to include that information?
    * Good answer: make a separate orders table and order_history table, add `order_uuid` to orders table
-* If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc).
+* If you needed to build a REST API to serve data about Orders, what main endpoint would you use and how would you design it (query params, http method(s) etc)?
    * Many ways to do this, just looking to see if they are thinking about filtering orders by system etc.
 * If you could design the storage from scratch, what would you change?
    * Many things could change, should probably at least wonder about the implementation of the `allowed_parts` table and connections -- foreign keys could be replaced by an on insert trigger, for example.
 
 ## Development and Evaluation
+Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
+* `make help` - shows major targets
+* `make help-dev` - shows helper targets
+* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql`
+* `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose
+
+Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
 
 ### Development Environment
 Requirements:
 * Internet connection (for pulling images from DockerHub)
 * Docker
-* Python 3.x
+* Python 3.8+: If you need to use a lower version of python, make sure to change the `/rc/Dockerfile` and `requirements.txt` as the ingestion script will be run by that image.
+
+Use `make dev-up` to stand up the database.  Here is a list of files for the solution:
+* `src/ingest.py` entrypoint for ingestion, modify the `ingest_data()` method.
+* `src/comms.py` contains a framework to connect to the postgres instance.
+* `src/requirements.txt` keep track of dependencies here for the solution image to build.
+
+If you include additionaly libraries or dependencies in your ingestion script, make sure you add them to `/src/requirements.txt` for the docker image to build and run successfully.
+
+### Testing your solution
+
+### Submission
+
+The primary way we will evaluate your submission is to stand up postgres and run your solution image against the schema and data sources.
+
+As a backup, please run `make submit` which will build the following artifacts as a tarball (again this is a backup)
+* `submission/components.csv` - dump of filled components table
+* `submission/parts.csv` - dump of filled parts table
+* `submission/users.csv` - dump of users table
+* `submission/allowed.csv` - dump of allowed_parts table
+* `submission/pg_dump.tar.gz` - pg_dump of orders database
 
 ## Data diagram
 
@@ -146,11 +173,3 @@ The `details` field is optional and is only included on `ORDERED` status message
 * Transform the user names into `first_name.last_name` format
 * Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
 * The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries
-
-<!-- TODO: Remove section after assessment is finalized -->
-## ETL gotchas
-Aside from the cleaning required in the individual fields mentioned in the Data descriptions, the following is also being tested:
-* Most recent status: Legacy data will have to be aggregated and different fields picked from different staus updates.  Only the most recent status should be put into the database, but the user information will have to be picked from either the `PENDING` or `ORDERED` row.
-* Conflicting users:  Rarely, an order will have a conflicting user for the most recent status.  This shouldn't affect the ingestion as long as they are relying on the proper STATUS row to get the `ordered_by` information.
-* Component names in the raw data can be in many different formats either using spaces or underscores between words, sometimes capitalized and sometimes not.  They are consistent in a single `order_uuid`
-* User names can be in `First Last`, `Last, First`, or `first.last` formats in the raw data

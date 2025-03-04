@@ -25,7 +25,12 @@ help-dev: ## Show available dev-facing targets
 
 .PHONY: dev-up
 dev-up: ## Brings up a fresh postgresql server available on localhost:5432
-	$(MAKE) _test-postgres-down _test-postgres-up _test-schema-up
+	if [ "$(shell docker ps -a -q -f name=postgres)"  ]; then \
+		$(MAKE) _test-postgres-down; \
+	fi
+	$(MAKE) _test-postgres-up
+	sleep 2
+	$(MAKE) _test-schema-up
 
 .PHONY: _test-postgres-up
 _test-postgres-up: #_# Brings up a postgres container with the correct database / user / password
