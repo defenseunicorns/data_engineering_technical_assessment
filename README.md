@@ -24,19 +24,8 @@ A DBA has designed a new PostgreSQL schema to store the recovered legacy data an
 
 Your task is to write scripts to clean and ingest the legacy data, simulating both batch and stream processing. You should spend no more than four hours on the coding portion. Be prepared to discuss your approach during the assessment, but you do not need to submit written answers to the questions.
 
-### Task
-<!-- TODO: maybe remove or make more vague grading criteria for users -->
-What is required to "pass" this assessment is to successfully populate the `components`, `parts`, `allowed_parts`, `users`, and `orders` tables from the legacy data.  Specific criteria that will be tested:
-* pass/fail:
-   * orders table number of rows = sum of unique `uuids` in legacy data dumps
-* assessment rubric (in order of weight):
-   * correct `ordered_by` and `ordered_date` in `orders` table
-   * correct `status` and `status_date` in `orders` table
-   * correct number of components and parts
-   * only valid entries in `components.system_name` and `orders.status`
-   * correct number `deprecated` entries in `allowed_parts`
-   * correct number of orders with `comp_priority` flag set
-   * complexity / quality of ingestion scripts / db communications
+### Evaluation criteria
+To "pass" the assessment, there must be valid entries in the `components`, `parts`, and `users` table for each element in the data.  To be considered competetive, there should be an entry in the `orders` table for each `order_uuid` in the raw data.  There will be other automated tests to check for valid cleaning and formatting as well.  There will also be a general assessment of code quality and complexity, but the highest weight is getting the right data into the database.
 
 ### Questions
 Be prepared to answer questions about the design and implementation of the storage.  Examples include:
@@ -70,11 +59,11 @@ The `manufacturer_id` and `part_no` tuples must be unique
 
 ### Allowed Parts
 
-When ordering parts against components, it is important that the parts are allowed to be ordered against that component.  Unfortunately, only the current allowed parts list survived the disaster so the deprecated parts parings must be inferred from the orders.  Allowed parts mappings:
+When ordering parts against components, it is important that the parts are allowed to be ordered against that component.  Unfortunately, only the current allowed parts list survived the disaster so the deprecated parts parings must be inferred from the orders.  You can assume a pairing that is not in `data/allowed_parts.csv` is deprecated.  Allowed parts mappings:
 * `component_id`: References components table
 * `part_id`: References parts table
 * `deprecated`: Whether this component / part pairing is currently in the allowed parts list
-`component_id` and `primary_key` tuples must be unique (and serve as the primary key)
+`component_id` and `part_id` tuples must be unique (and serve as the primary key)
 
 ### Users
 
@@ -136,7 +125,7 @@ The streaming data json has the following schema:
    }
 }
 ```
-The `details` field is optional and is only included on `ORDERED` status messages.  For a given order, the messages are found in chronological order in the json dump, although the orders themselves are jumbled.  Build a method to handle these on a message by message basis.
+The `details` field is optional and is only included on `ORDERED` status messages.  For a given order, the messages are found in chronological order in the json dump, although the orders themselves are jumbled.  Process these message by message to simulate receiving streaming data.
 
 ### Cleaning required
 * Transform the component names into `lowercase_with_underscore_spaces` format
