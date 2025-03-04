@@ -39,7 +39,6 @@ What is required to "pass" this assessment is to successfully populate the `comp
    * complexity / quality of ingestion scripts / db communications
 
 ### Questions
-<!-- TODO: remove sample answers -->
 Be prepared to answer questions about the design and implementation of the storage.  Examples include:
 * Are there any important pieces of legacy information lost in the current schema?
 * Assuming a year of orders are kept in the database before being moved to cold storage, how many orders per year would you feel comfortable supporting with this architecture?
@@ -143,7 +142,7 @@ The `details` field is optional and is only included on `ORDERED` status message
 * Transform the component names into `lowercase_with_underscore_spaces` format
 * Transform the user names into `first_name.last_name` format
 * Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
-* The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries
+* The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries, be sure to pull from valid rows.
 
 ## Development and Evaluation
 Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
