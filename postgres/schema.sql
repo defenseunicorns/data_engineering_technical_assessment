@@ -34,5 +34,5 @@ CREATE TABLE IF NOT EXISTS orders (
   ordered_by INT REFERENCES users(user_id),
   status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
   status_date TIMESTAMP,
-  FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id),
+  FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id)
 );
