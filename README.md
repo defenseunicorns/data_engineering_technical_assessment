@@ -75,6 +75,7 @@ This is a simple lookup table to hold user information.  Fields:
 
 This is the main table to track orders.  It has the following fields:
 * `order_id`: database assigned integer primary key
+* `supplier_uuid`: The supplier's `order_uuid` VARCHAR(36) UNIQUE NOT NULL
 * `component_id`: References components table
 * `part_id`: References parts table
 * `serial_no`: Integer serial number of part ordered
@@ -83,7 +84,7 @@ This is the main table to track orders.  It has the following fields:
 * `ordered_by`: References `users.user_id` that submitted the order
 * `status`: VARCHAR(16), current order status. valid entries are `PENDING`, `ORDERED`, `SHIPPED`, and `RECEIVED`
 * `status_date`: Datetime the `status` field was set or updated
-* an `order_id` is uniquely defined by the combination of `comopnent_id`, `part_id`, and `serial_no`.
+* an `order_id` has a unique mapping to a `supplier_uuid`.
 * The `component_id`, `part_id` pairing must exist in the `allowed_parts` table
 
 ## Data descriptions - Data dumps
@@ -129,7 +130,7 @@ The `details` field is optional and is only included on `ORDERED` status message
 
 ### Cleaning required
 * Transform the component names into `lowercase_with_underscore_spaces` format
-* Transform the user names into `first_name.last_name` format
+* Transform the user names into `first_name.last_name` format.  Other formats you may encounter are `First Last` or `Last, First`.
 * Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
 * The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries, be sure to pull from valid rows.
 

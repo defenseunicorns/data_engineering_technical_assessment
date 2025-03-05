@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS orders (
   order_id SERIAL PRIMARY KEY,
+  supplier_uuid VARCHAR(64) UNIQUE NOT NULL,
   component_id INT REFERENCES components(component_id) ON DELETE SET NULL,
   part_id INT REFERENCES parts(part_id) ON DELETE SET NULL,
   serial_no INT,
@@ -34,5 +35,4 @@ CREATE TABLE IF NOT EXISTS orders (
   status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
   status_date TIMESTAMP,
   FOREIGN KEY (component_id, part_id) REFERENCES allowed_parts(component_id, part_id),
-  UNIQUE (component_id, part_id, serial_no)
 );
