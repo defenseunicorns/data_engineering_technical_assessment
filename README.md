@@ -122,7 +122,7 @@ The `details` field is optional and is only included on `ORDERED` status message
 Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
 * `make help` - shows major targets
 * `make help-dev` - shows helper targets
-* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql` (can also )
+* `make dev-up` - stands up a new postgres instance (or recycles your current postgres) with the correct table schema in `postgres/schema.sql`
 * `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose. WARNING: This will recycle the database
 
 Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
