@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS parts (
 
 CREATE TABLE IF NOT EXISTS users (
   user_id SERIAL PRIMARY KEY,
-  user_name VARCHAR(32) -- format should be first_name.last_name
+  user_name VARCHAR(32) UNIQUE -- format should be first_name.last_name
 );
 
 CREATE TABLE IF NOT EXISTS orders (
@@ -26,5 +26,5 @@ CREATE TABLE IF NOT EXISTS orders (
   order_date TIMESTAMP,
   ordered_by INT REFERENCES users(user_id),
   status VARCHAR(16), -- valid are PENDING, ORDERED, SHIPPED, and RECEIVED
-  status_date TIMESTAMP,
+  status_date TIMESTAMP
 );

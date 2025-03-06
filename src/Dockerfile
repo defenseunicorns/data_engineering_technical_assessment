@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 py3-pip git gcc musl-dev python3-dev
 RUN pip3 install --no-cache --upgrade --break-system-packages pip setuptools
 
 RUN mkdir /app

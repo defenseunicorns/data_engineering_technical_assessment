@@ -31,7 +31,7 @@ dev-up: ## Brings up a fresh postgresql server available on localhost port 5432
 
 .PHONY: submit
 submit: ## Gets a pg_dump of the orders database and saves to submission/pg_dump.tar.gz
-	$(MAKE) _test-check-submission-dir _test-pg-dump
+	$(MAKE) _test-check-submission-dir _test-pg-dump _test-src-dump
 
 .PHONY: ingest
 ingest: ## WARNING This will recycle the postgres deployment.  Runs a full ingestion test with docker compose
@@ -45,6 +45,10 @@ run-tests: ## Runs the tests in src/tests.py using pytest
 .PHONY: _test-pg-dump
 _test-pg-dump: #_# Executes a pg dump of the orders database to submissions
 	docker exec postgres pg_dump -U orders -F t orders | gzip >./submission/pg_dump.tar.gz
+
+.PHONY: _test-src-dump
+_test-src-dump: #_# creates a tar.gz of the ./src directory
+	tar -czvf submission/src.tar.gz ./src
 
 .PHONY: _test-postgres-up
 _test-postgres-up: #_# Brings up a postgres container with the correct database / user / password
@@ -66,10 +70,11 @@ _test-postgres-down: #_# Brings down the postgres container
 
 .PHONY: _test-check-submission-dir
 _test-check-submission-dir: #_# Creates the submission directory if it doesn't exist
-	if test -d "./submission"; then \
+	if [ -d "./submission" ]; then \
 		echo "submission Directory exists"; \
 	else \
 		mkdir submission; \
+	fi
 
 .PHONY: _test-schema-up
 _test-schema-up: #_# Creates the database schema for psql
