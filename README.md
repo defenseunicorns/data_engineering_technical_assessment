@@ -57,14 +57,6 @@ A part is something that can be ordered, like a bolt or a chassis.  Parts are ge
 * `part_no`: Manufacturer's part number for the specific part
 The `manufacturer_id` and `part_no` tuples must be unique
 
-### Allowed Parts
-
-When ordering parts against components, it is important that the parts are allowed to be ordered against that component.  Unfortunately, the current allowed parts list did not survive the disaster and so it must be inferred from the data.  The last allowed parts list was current as of `2018-05-17`, so you should mark any pairing that only occurs prior to that date as deprecated.
-* `component_id`: References components table
-* `part_id`: References parts table
-* `deprecated`: Whether this component / part pairing is currently in the allowed parts list
-`component_id` and `part_id` tuples must be unique (and serve as the primary key)
-
 ### Users
 
 This is a simple lookup table to hold user information.  Fields:
@@ -85,17 +77,8 @@ This is the main table to track orders.  It has the following fields:
 * `status`: VARCHAR(16), current order status. valid entries are `PENDING`, `ORDERED`, `SHIPPED`, and `RECEIVED`
 * `status_date`: Datetime the `status` field was set or updated
 * an `order_id` has a unique mapping to a `supplier_uuid`.
-* The `component_id`, `part_id` pairing must exist in the `allowed_parts` table
 
 ## Data descriptions - Data dumps
-
-### Allowed parts list
-Current allowed parts list has the following format / aggregation challenges and can be found in the `data/allowed_parts.csv`.  There may be components or parts in the allowed parts list that do not have any order data.
-
-* `component_name`: string lower case name of component with underscores
-* `system_name`: upper case string of system name
-* `manufacturer_id`: integer manufacturer id
-* `part_no`: integer part number
 
 ### Batch Order Data
 The batch processing dump is in the `data/batch_orders.parquet` file and the streaming dump is in the `data/streaming_orders.json`.  Both have the following general fields, as well as the type of cleaning needed to be completed
@@ -132,7 +115,6 @@ The `details` field is optional and is only included on `ORDERED` status message
 ### Cleaning required
 * Transform the component names into `lowercase_with_underscore_spaces` format.
 * Transform the user names into `first_name.last_name` format.  Other formats you may encounter are `First Last` or `Last, First`.
-* Ensure there is a valid entry in the `allowed_parts` table prior to attempting to insert an order
 * The `ordered_by` field in `data/batch_orders.parquet` may have some corrupt entries, be sure to pull from valid rows.
 * Mark parts / component pairs that *only* occur prior to `2018-05-17` as deprecated.
 
@@ -140,8 +122,8 @@ The `details` field is optional and is only included on `ORDERED` status message
 Most of the setup can be done via Make targets.  Here is a list of the relevant targets:
 * `make help` - shows major targets
 * `make help-dev` - shows helper targets
-* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql`
-* `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose
+* `make dev-up` - stands up a new postgres instance with the correct table schema in `postgres/schema.sql` (can also )
+* `make ingest` - builds the solution image from the `/src` folder and runs it using docker-compose. WARNING: This will recycle the database
 
 Your ingestion script's entrypoint is in the method `ingest_data()` in `src/ingest.py`.
 
@@ -152,8 +134,9 @@ Requirements:
 * Internet connection (for pulling images from DockerHub)
 * Docker
 * Python 3.8+: If you need to use a lower version of python, make sure to change the `/rc/Dockerfile` and `requirements.txt` as the ingestion script will be run by that image.
+* `tar` binary
 
-Use `make dev-up` to stand up the database.  Here is a list of files for the solution:
+Use `make dev-up` to stand up the database or to stand up a fresh db with blank tables.  Here is a list of files for the solution:
 * `src/ingest.py` entrypoint for ingestion, modify the `ingest_data()` method.
 * `src/comms.py` contains a framework to connect to the postgres instance.
 * `src/requirements.txt` keep track of dependencies here for the solution image to build.
