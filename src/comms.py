@@ -14,7 +14,12 @@ PWD = "s3cr3tp455w0rd"
 DB = "orders"
 HOST = os.environ.get("PG_HOST", "localhost")
 
-def get_table(table, con, schema=None):
+def get_table(table, con, schema=None) -> Table:
+   """Returns a sqlalchemy Table object via reflection
+   :param table: string name of table
+   :param con: connection object (sqlalchemy / psycopg2 etc)
+   :schema: if the table is not in the default schema, put the string name here
+   :returns: sqlalchemy Table object"""
    meta = MetaData(schema=schema)
    return Table(table, meta, autoload_with=con)
 

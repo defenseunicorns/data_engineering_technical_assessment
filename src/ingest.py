@@ -21,9 +21,9 @@ def get_streaming_json() -> list:
 # IMPLEMENT THIS METHOD
 def ingest_data():
    df = get_batch_data()
-   log.info(f'{df.head()}')
+   log.info(f'Batch data:\n{df.head()}')
    messages = get_streaming_json()
-   log.info(f'{messages[0]}')
+   log.info(f'First streaming message:\n{messages[0]}')
 
 if __name__ == "__main__":
    setup_logging()
