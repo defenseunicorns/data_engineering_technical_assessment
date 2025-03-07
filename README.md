@@ -25,7 +25,7 @@ A DBA has designed a new PostgreSQL schema to store the recovered legacy data an
 Your task is to write scripts to clean and ingest the legacy data, simulating both batch and stream processing. You should spend no more than four hours on the coding portion. Be prepared to discuss your approach during the assessment, but you do not need to submit written answers to the questions.
 
 ### Evaluation criteria
-To "pass" the assessment, there must be valid *cleaned* entries in the `components` and `users` table for each element in the data.  To be considered competetive, there should be an entry in the `parts` table for all parts in the batch and streaming process as well as an order in the `orders` table for each `order_uuid` in the both sources of data.  There will be other automated tests to check for cleaning and formatting as well.  There will also be a general assessment of code quality and complexity, but the highest weight is getting the right data into the database.
+To "pass" the assessment, there must be valid *cleaned* entries in the `components` and `users` table for each element in the batch orders.  To be considered competetive, there should be an entry in the `parts` table for all parts in the batch and streaming data as well as an order in the `orders` table for each `order_uuid` in the both sources of data.  There will be other automated tests to check for cleaning and formatting as well.  There will also be a general assessment of code quality and complexity, but the highest weight is getting the right data into the database.
 
 ### Questions
 Be prepared to answer questions about the design and implementation of the storage.  Examples include:
@@ -71,7 +71,7 @@ This is the main table to track orders.  It has the following fields:
 * `component_id`: References components table
 * `part_id`: References parts table
 * `serial_no`: Integer serial number of part ordered
-* `comp_priority`: Boolean, set to true if this is a priority order
+* `comp_priority`: Boolean, false for batch orders, true for streaming orders
 * `order_date`: Datetime the date status was set to `ORDERED` (may be null if last status is `PENDING`)
 * `ordered_by`: References `users.user_id` that submitted the order
 * `status`: VARCHAR(16), current order status. valid entries are `PENDING`, `ORDERED`, `SHIPPED`, and `RECEIVED`
@@ -83,13 +83,13 @@ The batch processing dump is in the `data/batch_orders.parquet` file and the str
 ### Batch Order Data
 The batch orders are in a parquet where each row represents a status update.  Keep in mind that not every row has all of the fields filled so you'll have to do some aggregating and cleaning. Below is a list of fields and any cleaning needed.
 * `order_uuid`: UUID the shipping system uses to keep track of orders
-* `component_name`: name of the component (multiple cases, spaces may be `_` characters)
+* `component_name`: name of the component (multiple cases, `'_'` may be interchanged with `' '` characters)
 * `system_name`: name of the system (no cleaning required)
 * `manufacturer_id`: integer id of the manufactuer (no cleaning required)
 * `part_no`: integer part number (no cleaning required)
 * `serial_no`: integer serial number (no cleaning required)
-* `status`: status of order (no cleaning required for formatting)
-* `status_date`: datetime of update in `YYYY-MM-DD HH:MM:SS` format (no cleaning required for formatting)
+* `status`: status of order (no cleaning required)
+* `status_date`: datetime of update in `YYYY-MM-DD HH:MM:SS` format
 * `ordered_by`: Name of user who ordered part (only shows in `PENDING` rows for batch orders or `ORDERED` messages for the streaming format, different name formats)
 
 ### Priority (streaming) Order Data

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS orders (
   order_id SERIAL PRIMARY KEY,
-  supplier_uuid VARCHAR(64) UNIQUE NOT NULL,
+  supplier_uuid VARCHAR(36) UNIQUE NOT NULL,
   component_id INT REFERENCES components(component_id) ON DELETE SET NULL,
   part_id INT REFERENCES parts(part_id) ON DELETE SET NULL,
   serial_no INT,
