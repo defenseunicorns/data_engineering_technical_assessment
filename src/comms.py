@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, MetaData, Table, engine
 from sqlalchemy.sql import text, select
 import psycopg2
-from logs import get_logger, setup_logging
+from logs import get_logger
 import os
 
 import pandas as pd

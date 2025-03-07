@@ -1,6 +1,5 @@
 import pandas as pd
 import json
-from sqlalchemy.sql import text
 from logs import setup_logging, get_logger
 from comms import test_connections, check_schema
 
