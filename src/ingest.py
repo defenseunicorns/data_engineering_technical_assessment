@@ -18,12 +18,15 @@ def get_streaming_json() -> list:
       messages = json.load(fh)
    return messages
 
-# IMPLEMENT THIS METHOD
+# FEEL FREE TO WRITE HELPER METHODS HERE OR IN SEPARATE FILES LIKE comms.py #
+
 def ingest_data():
    df = get_batch_data()
    log.info(f'Batch data:\n{df.head()}')
    messages = get_streaming_json()
    log.info(f'First streaming message:\n{messages[0]}')
+
+   # FINISH INGESTION HERE
 
 if __name__ == "__main__":
    setup_logging()
