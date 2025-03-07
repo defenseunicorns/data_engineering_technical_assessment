@@ -140,8 +140,9 @@ Requirements:
 
 Use `make dev-up` to stand up the database or to stand up a fresh db with blank tables.  Here is a list of files for the solution:
 * `src/ingest.py` entrypoint for ingestion, modify the `ingest_data()` method.
-* `src/comms.py` contains a framework to connect to the postgres instance.
+* `src/comms.py` contains sqlalchemy and psycopg2 connection methods to the postgres database.
 * `src/requirements.txt` keep track of dependencies here for the solution image to build.
+* `src/logs.py` Configures a logging system for use with your ingestion solution
 
 If you include additionaly libraries or dependencies in your ingestion script, make sure you add them to `/src/requirements.txt` for the docker image to build and run successfully.
 
@@ -157,6 +158,6 @@ The primary way we will evaluate your submission is to build and run the solutio
 
 As a backup, please run `make submit` prior to making and pushing your submission commit which will build the following artifacts as a tarball (again this is a backup if there are problems with the container image)
 * `submission/pg_dump.tar.gz` - pg_dump of orders database
-* `src.tar.gz` - tarball of the `src` directory
+* `submission/src.tar.gz` - tarball of the `src` directory
 
 Once you are satisifed with your solution and have created the pg_dump file, push your full solution to your branch.

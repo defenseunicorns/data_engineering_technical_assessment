@@ -55,7 +55,7 @@ def get_psycopg2_connection() -> psycopg2.extensions.connection:
    return psycopg2.connect(**connection_dict)
 
 def test_connections():
-   """Tests the psycopg2 connection and sqlalchemy engine"""
+   """Tests the sqlalchemy connection and the psycopg2 connection"""
    log.info(f'Testing sqlalchemy engine')
    eng = get_sqlalchemy_engine()
    try:
